@@ -1,0 +1,10 @@
+<ul>
+    {% for friend in site.data.friends %}
+    <li>
+      <a href="{{ friend.url }}" target="_blank">
+        <img src="{{ friend.avatar }}" alt="{{ friend.name }}" width="30" height="30">
+        {{ friend.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>

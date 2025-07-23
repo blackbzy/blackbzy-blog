@@ -1,0 +1,62 @@
+<!-- waline 评论框样式 -->
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+
+<!-- 页面自定义样式 -->
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .content-container {
+    max-width: 1200px; /* 主内容区域的最大宽度 */
+    margin: 0 auto;
+    padding: 0 16px; /* 为页面两侧添加内边距 */
+  }
+
+  #waline {
+    max-width: 800px; /* 评论框的最大宽度 */
+    margin: 0 auto;   /* 水平居中 */
+    padding: 0 16px;  /* 添加左右内边距，避免贴边 */
+  }
+</style>
+
+<!-- waline 评论框 HTML -->
+<div class="content-container">
+  <div id="waline"></div>
+</div>
+
+<!-- 引入 waline 模块并初始化 -->
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    const locale = {
+      placeholder: '{{ site.comments.waline.placeholder }}',
+    };
+    init({
+      el: '#waline',
+      dark: 'auto', // 自动暗黑模式
+      reaction: true,  // 文章反应
+      search: false,  // 表情包搜索
+      serverURL: '{{ site.comments.waline.server }}',
+
+      // 设置 emoji 为微博与哔哩哔哩
+      emoji: [
+      '//unpkg.com/@waline/emojis@1.1.0/weibo',
+      '//unpkg.com/@waline/emojis@1.1.0/bilibili',
+      '//unpkg.com/@waline/emojis@1.1.0/tw-emoji',
+      '//unpkg.com/@waline/emojis@1.1.0/qq',
+      ],
+      dark: "__waline__css__",
+      locale,
+    });
+    let head = document.getElementsByTagName("head")[0];
+    let css = head.lastChild;
+    let cssContent = css.textContent.replace("__waline__css__", "");
+    let cssContentPerferredDark = "@media (prefers-color-scheme: dark){html:not([data-mode])" + cssContent + "}";
+    let cssContentSelectedDark = "html[data-mode=dark]" + cssContent;
+    css.textContent = cssContentPerferredDark;
+    let style = document.createElement('style');
+    style.textContent = cssContentSelectedDark;
+    head.appendChild(style);
+  </script>

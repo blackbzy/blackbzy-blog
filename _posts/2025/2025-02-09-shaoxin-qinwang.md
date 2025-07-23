@@ -8,7 +8,7 @@ categories:
 tags:
   - trekking
   - china
-auther: blackbzy
+author: blackbzy
 update_date: 2025-02-09
 pin: false
 toc: true

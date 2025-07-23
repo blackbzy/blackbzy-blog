@@ -8,7 +8,7 @@ categories:
 tags:
   - first_experience
   - live-house
-auther: blackbzy
+author: blackbzy
 update_date: 2024-12-25
 pin: false
 toc: true

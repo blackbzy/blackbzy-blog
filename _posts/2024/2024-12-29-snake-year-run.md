@@ -6,7 +6,7 @@ categories:
   - run
 tags:
   - run
-auther: blackbzy
+author: blackbzy
 update_date: 2024-12-29
 pin: false
 toc: true

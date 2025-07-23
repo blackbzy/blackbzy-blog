@@ -7,7 +7,7 @@ categories:
 tags:
   - river-tracing
   - china
-auther: blackbzy
+author: blackbzy
 update_date: false
 pin: false
 toc: true

@@ -6,7 +6,7 @@ categories:
   - exhibition
 tags:
   - exhibition
-auther: blackbzy
+author: blackbzy
 update_date: 2024-12-15
 pin: false
 toc: true

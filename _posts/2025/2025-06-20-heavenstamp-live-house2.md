@@ -7,7 +7,7 @@ categories:
   - heavenstamp
 tags:
   - live-house
-auther: blackbzy
+author: blackbzy
 update_date: 2025-06-22
 pin: false
 toc: true

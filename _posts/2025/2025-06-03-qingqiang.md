@@ -6,7 +6,7 @@ categories:
   - read
 tags:
   - read
-auther: blackbzy
+author: blackbzy
 update_date: 2025-07-06
 pin: false
 toc: true

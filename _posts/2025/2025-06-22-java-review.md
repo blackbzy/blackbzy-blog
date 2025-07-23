@@ -6,7 +6,7 @@ categories:
   - back-end
 tags:
   - back-end
-auther: blackbzy
+author: blackbzy
 update_date: false
 pin: false
 toc: true

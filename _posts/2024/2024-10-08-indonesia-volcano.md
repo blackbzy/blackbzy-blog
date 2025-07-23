@@ -8,7 +8,7 @@ categories:
 tags:
   - trekking
   - indonesia
-auther: blackbzy
+author: blackbzy
 update_date: 2024-10-20
 pin: true
 toc: true

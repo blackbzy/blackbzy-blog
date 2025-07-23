@@ -6,7 +6,7 @@ categories:
   - travel
 tags:
   - travel
-auther: blackbzy
+author: blackbzy
 update_date: 2025-04-21
 pin: false
 toc: true

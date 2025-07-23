@@ -6,7 +6,7 @@ categories:
   - blog
 tags:
   - blog
-auther: blackbzy
+author: blackbzy
 update_date: 2024-12-18
 pin: false
 toc: true

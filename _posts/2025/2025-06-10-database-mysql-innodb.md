@@ -6,7 +6,7 @@ categories:
   - database
 tags:
   - database
-auther: blackbzy
+author: blackbzy
 update_date: false
 pin: false
 toc: true

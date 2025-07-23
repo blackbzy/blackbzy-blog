@@ -7,7 +7,7 @@ categories:
 tags:
   - first_experience
   - Trail Running
-auther: blackbzy
+author: blackbzy
 update_date: false
 pin: false
 toc: true

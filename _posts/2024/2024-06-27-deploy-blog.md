@@ -6,7 +6,7 @@ categories:
   - blog
 tags:
   - blog
-auther: blackbzy
+author: blackbzy
 update_date: 2025-07-23
 pin: false
 toc: true
@@ -106,7 +106,7 @@ url: ""
 npm install
 ```
 如果存在以下报错,是node和npm版本不够，需要升级：
-```txt
+```bash
 npm WARN EBADENGINE Unsupported engine { 
 npm WARN EBADENGINE   package: 'stylelint-config-recommended-scss@15.0.1',
 npm WARN EBADENGINE   required: { node: '>=20' },
@@ -129,6 +129,50 @@ npm install
 npm run build
 ```
 最后运行项目，看是否还有报错。
+
+### 3.3项目`git commit`内容规范化
+符合以下格式
+```bash
+git commit -m "feat: 初始化迁移"
+```
+
+| type       | 说明         |
+| ---------- | ---------- |
+| `feat`     | 添加功能       |
+| `fix`      | 修复 bug     |
+| `docs`     | 仅文档变更      |
+| `style`    | 格式（空格、分号等） |
+| `refactor` | 代码重构       |
+| `test`     | 添加或修改测试    |
+| `chore`    | 杂项（构建工具等）  |
+
+### 3.4 页面右侧目录失效 ：即文章内容下的未渲染
+![toc-error.png](/assets/attachments/blog/toc-error.png)
+排查方式：
+1. Chirpy 的 TOC 需要你在文章头部设置中启用`toc: true `
+2. 文章是否包含 2 级或以上标题
+3. 是否构建了 post.min.js，在以下目录：`assets/js/dist/post.min.js`
+4. _config.yml 中是否禁用了 TOC
+5. 控制台是否有 JS 报错:post.min.js
+最后都没有问题，问题出现在。。。。我的文章的头部 YAML内容
+```yaml
+title: 科幻之书Ⅱ
+description: 科幻的力量在于为现实生活找到可能的出口，可能性！！！
+date: 2025-07-06
+categories:
+  - read
+tags:
+  - read
+## 对的就是 auther 拼写错了，导致下面的toc属性无法识别，然后渲染不出来
+auther: blackbzy
+update_date: false
+pin: false
+toc: true
+comments: true
+image:
+  path: assets/attachments/2025/science-fiction/science-fiction02.png
+  alt: 封面
+```
 
 ## 未完待续
 - [x] [01_模板配置](/posts/blog-template)

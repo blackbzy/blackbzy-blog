@@ -173,6 +173,26 @@ image:
   path: assets/attachments/2025/science-fiction/science-fiction02.png
   alt: 封面
 ```
+#### 3.4.1 后续vercel部署是`assets/js/dist/theme.min.js`文件404
+
+| 检查项                                           | 状态 |
+|-----------------------------------------------| -- |
+| GitHub 仓库根目录包含 `assets/js/dist/theme.min.js`？ | ✅  |
+| 文件名大小写匹配？                                     | ✅  |
+| vercel 输出目录配置为 `.`？                           | ✅  |
+| 不存在 `_site/` 子目录部署？                           | ✅  |
+| 请求路径和文件路径完全一致？                                | ✅  |
+| 访问 Vercel 默认子域名看看能不能打开 JS                     | ✅  |
+
+最后检查出来是 域名 绑定vercel的问题，因为我的的是托管在cloudflare上，dns配置成代理的话，会导致CNAME 配置指向错误:即你现在的 DNS 设置阻止了它的 bot 和静态资源加速、JS 加载等机制
+
+修改方式：在cloudflare上修改dns记录
+
+| 主机记录（Host） | 记录类型  | 值                     |
+| ---------- | ----- | --------------------- |
+| @          | CNAME | cname.vercel-dns.com. |
+| www        | CNAME | cname.vercel-dns.com. |
+
 
 ## 未完待续
 - [x] [01_模板配置](/posts/blog-template)

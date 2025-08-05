@@ -21,6 +21,9 @@ image:
 > 过程是结果，结果也只是过程
 {: .prompt-info }
 
+{% include embed/bilibili.html id='BV1gf3FzAEho' %}
+{% include embed/youtube.html id='wByDLkIgFvM' %}
+
 烈日炎炎，第二次的九龙之巅以切线作为了注脚。
 
 此行是和老k、大力一起组成夏日天吃苦小分队，我们的口号是“这苦一定要吃吗，这苦是吃定了QAQ”。最终得偿所愿，追山者，被山和这太阳按在地上摩擦。

@@ -21,6 +21,7 @@ image:
 {: .prompt-info }
 
 {% include embed/youtube.html id='Q-Ke7mlRITs' %}
+{% include embed/bilibili.html id='BV1GCNRzgEEK' %}
 
 今天已是周日，外面滴滴答答的倒着大雨，回忆找回到了周五晚。
 

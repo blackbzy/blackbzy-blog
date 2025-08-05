@@ -1,6 +1,6 @@
 ---
 title: 仙锅瞰竹-苦痛之路
-description: 总之越野一定做好补给备份，对大自然要有敬畏之心
+description: 总之越野一定做好补给备份，对大自然要有敬畏之心(；′⌒`)
 date: 2025-05-04
 categories:
   - trekking

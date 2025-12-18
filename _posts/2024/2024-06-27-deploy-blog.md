@@ -7,7 +7,7 @@ categories:
 tags:
   - blog
 author: blackbzy
-update_date: 2025-07-23
+update_date: 2025-12-19
 pin: false
 toc: true
 comments: 
@@ -193,6 +193,9 @@ image:
 | @          | CNAME | cname.vercel-dns.com. |
 | www        | CNAME | cname.vercel-dns.com. |
 
+### 3.5 rss订阅问题
+我因为中途切换为直接推 `/site`目录下的内容，rss订阅链接导致全是本地的链接，其他人无法访问。
+目前重新调整为vercel自动部署。
 
 ## 未完待续
 - [x] [01_模板配置](/posts/blog-template)

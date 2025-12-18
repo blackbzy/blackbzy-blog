@@ -367,10 +367,17 @@ image:
 ## day11 10-7 终于可以好好睡觉了 睡眠0h
 在回到出租屋时已是12点，然后洗衣服收拾东西，洗个澡到6点撑不住了，睡了14个小时到了第二天7点
 
+## 后记
 后面设计了定制的衣服在周末感谢了庄主的定制行程
 <div style="display: flex; margin: 0; padding: 0;">
   <img src="assets/attachments/2024/indonesia-volcano/indonesia007.jpg" alt="Image 1" style="flex-basis: 50%;  object-fit: cover;margin: 0; padding: 0; display: block;">
   <img src="assets/attachments/2024/indonesia-volcano/indonesia008.jpg" alt="Image 2" style="flex-basis: 50%;  object-fit: cover;margin: 0; padding: 0; display: block;">
+</div>
+
+>2025/12/01 最近尝试了下油画棒，重新绘制了一下当年的照片
+<div style="display: flex; margin: 0; padding: 0;">
+  <img src="assets/attachments/2024/indonesia-volcano/indonesia0014.jpg" alt="Image 1" style="flex-basis: 50%;  object-fit: cover;margin: 0; padding: 0; display: block;">
+  <img src="assets/attachments/2024/indonesia-volcano/indonesia0015.gif" alt="Image 2" style="flex-basis: 50%;  object-fit: cover;margin: 0; padding: 0; display: block;">
 </div>
 
 ---

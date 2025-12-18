@@ -1,11 +1,13 @@
 ---
-title: 新四军牌老中药，朋友爬了都说苦(┬┬﹏┬┬)
+title: （宜兴）新四军牌老中药，朋友爬了都说苦(┬┬﹏┬┬)
 description: 对新四军要有敬畏之心(；′⌒`)
 date: 2025-11-03
 categories:
-  - blog
+  - trekking
+  - china
 tags:
-  - blog
+  - trekking
+  - china
 author: blackbzy
 update_date: false
 pin: false

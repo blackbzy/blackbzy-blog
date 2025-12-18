@@ -76,5 +76,8 @@ image:
 ![img](assets/attachments/2024/photographic-exhibition/photographic-exhibition08.jpg)
 <p align="center">野 2024 《江对月影》</p>
 
+## 后记
+参加了一场越野比赛的摄影，也许照片的意义得看内容是什么，也要看对谁。
+
 ---
 故事未完:350

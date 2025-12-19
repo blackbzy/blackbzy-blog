@@ -1,14 +1,17 @@
 <script>
   (function () {
-    const walineServerURL = 'https://comment.blackbzy.com/'; // 你的 Waline 地址
+    const walineServerURL = 'https://comment.blackbzy.com/';
 
     // 1. 动态加载 CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://unpkg.com/@waline/client@v3/dist/waline.css';
-    document.head.appendChild(link);
+    if (!document.getElementById('waline-style')) {
+      const link = document.createElement('link');
+      link.id = 'waline-style';
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/@waline/client@v3/dist/waline.css';
+      document.head.appendChild(link);
+    }
 
-    // 2. 创建并注入 Waline 容器
+    // 2. 注入评论框容器
     const walineDiv = document.createElement('div');
     walineDiv.id = 'waline';
     const $footer = document.querySelector('footer');
@@ -16,31 +19,31 @@
       $footer.insertAdjacentElement('beforebegin', walineDiv);
     }
 
-    // 3. 异步初始化 Waline
-    import('https://unpkg.com/@waline/client@v3/dist/waline.js').then(({ init }) => {
-      // 获取当前主题状态
-      // Chirpy 默认在 html 标签上通过 data-mode 属性记录主题
-      const getTheme = () => document.documentElement.getAttribute('data-mode') === 'dark';
+    // 3. 异步初始化
+    import('https://unpkg.com/@waline/client@v3/dist/waline.js').then(({init, pageviewCount}) => {
 
-      const waline = init({
+      // 初始化评论
+      init({
         el: '#waline',
         serverURL: walineServerURL,
-        dark: 'html[data-mode="dark"]', // 关键：自动监听 HTML 上的主题属性变化
-        reaction: true, // 可选：开启表情互动
-        // 这里可以继续添加 site.comments.waline.xxx 等 Jekyll 配置变量
+        dark: 'html[data-mode="dark"]',
+        reaction: true,
+        pageview: true, // 开启记录功能
+
+        // 设置 emoji 为微博与哔哩小黄脸
+        emoji: [
+          '//unpkg.com/@waline/emojis@1.4.0/weibo',
+          '//unpkg.com/@waline/emojis@1.4.0/bmoji',
+        ],
       });
 
-      // 4. 监听主题切换事件 (同步 Chirpy 的主题切换)
-      window.addEventListener('message', (event) => {
-        if (
-          event.source === window &&
-          event.data &&
-          event.data.id === Theme.ID // 匹配 Chirpy 的主题 ID
-        ) {
-          // 注意：Waline v3 支持使用选择器自动切换，通常不需要手动 postMessage
-          // 如果需要手动强制刷新，可以在此处调用 waline 的更新方法
-        }
+      // 初始化阅读量显示
+      pageviewCount({
+        serverURL: walineServerURL,
+        update: true,
+        selector: '.waline-pageview-count'
       });
+
     });
   })();
 </script>

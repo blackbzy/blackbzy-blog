@@ -7,7 +7,7 @@ categories:
 tags:
   - blog
 author: blackbzy
-update_date: 2025-02-28
+update_date: 2025-12-19
 pin: false
 toc: true
 comments: 
@@ -19,57 +19,71 @@ media_subpath:
 {: .prompt-info }
 
 ---
-# mian
-1. 尝试基于valine添加comment 模块：
+## 1.前期试错
+尝试基于valine添加comment 模块：
 发现没有关于jykell的官方文档，只有[valine](https://duter2016.github.io/2019/09/18/Jekyll%E6%B7%BB%E5%8A%A0Valine%E8%AF%84%E8%AE%BA-%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5%E5%92%8C%E8%AF%84%E8%AE%BA%E5%88%97%E8%A1%A8%E5%A4%B4%E5%83%8F/) 的社区文档，于是尝试
-	1. 修改blog项目启动之后发现没用，没用排查头绪遂放弃
-##  2. 尝试基于Waline添加comment 模:
+- 修改blog项目启动之后发现没用，没用排查头绪遂放弃
+## 2.尝试基于Waline添加comment 模:
 这次是有[官方文档](https://waline.js.org/guide/get-started/)：jykell特殊调整内容如下
-	1. 数据库保持leanCloud，服务端基于vercel切换（基于[deta](https://waline.js.org/guide/deploy/deta.html)进行部署，也是可以的，尝试了一下没问题）
-	2. Waline部署完成，然后要在blog中添加的官方配置，单独建一个文件`_includes/head.html` ，内容如下：
-```md
-`<!-- waline 评论框 start -->
-
-<div id="waline"></div>
-
-<!-- waline 评论框 end -->
-<!-- 引入 waline 样式 -->
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
-<!-- 引入 waline 模块并初始化 -->
-  <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-    const locale = {
-      placeholder: '{{ site.comments.waline.placeholder }}',
-    };
-    init({
-      el: '#waline',
-      dark: 'auto', // 自动暗黑模式
-      reaction: true,  // 文章反应
-      search: false,  // 表情包搜索
-      serverURL: '{{ site.comments.waline.server }}',
-      // 设置 emoji 为微博与哔哩哔哩
-      emoji: [
-      '//unpkg.com/@waline/emojis@1.1.0/weibo',
-      '//unpkg.com/@waline/emojis@1.1.0/bilibili',
-      '//unpkg.com/@waline/emojis@1.1.0/tw-emoji',
-      '//unpkg.com/@waline/emojis@1.1.0/qq',
-      ],
-      dark: "__waline__css__",
-      locale,
-    });
-    let head = document.getElementsByTagName("head")[0];
-    let css = head.lastChild;
-    let cssContent = css.textContent.replace("__waline__css__", "");
-    let cssContentPerferredDark = "@media (prefers-color-scheme: dark){html:not([data-mode])" + cssContent + "}";
-    let cssContentSelectedDark = "html[data-mode=dark]" + cssContent;
-    css.textContent = cssContentPerferredDark;
-    let style = document.createElement('style');
-    style.textContent = cssContentSelectedDark;
-    head.appendChild(style);
-  </script>`
+### 2.1数据库链接leanCloud
+服务端基于vercel切换（基于[deta](https://waline.js.org/guide/deploy/deta.html)进行部署，也是可以的，尝试了一下没问题）
+系好leancloud提供的key，在vercel 的 chipry项目填入恰当的值
+```
+LEAN_MASTER_KEY:
+LEAN_KEY：
+LEAN_ID：
 ```
 
-同时在_config.yml文件中怎加waline相关配置：
+### 2.2新增waline 模板
+新建文件  _includes/comments/waline.html
+```md
+<script>
+  (function () {
+    const walineServerURL = 'https://comment.blackbzy.com/';
+
+    // 1. 动态加载 CSS
+    if (!document.getElementById('waline-style')) {
+      const link = document.createElement('link');
+      link.id = 'waline-style';
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/@waline/client@v3/dist/waline.css';
+      document.head.appendChild(link);
+    }
+
+    // 2. 注入评论框容器
+    const walineDiv = document.createElement('div');
+    walineDiv.id = 'waline';
+    const $footer = document.querySelector('footer');
+    if ($footer) {
+      $footer.insertAdjacentElement('beforebegin', walineDiv);
+    }
+
+    // 3. 异步初始化
+    import('https://unpkg.com/@waline/client@v3/dist/waline.js').then(({init, pageviewCount}) => {
+
+      // 初始化评论
+      init({
+        el: '#waline',
+        serverURL: walineServerURL,
+        dark: 'html[data-mode="dark"]',
+        reaction: true,
+        pageview: true // 开启记录功能
+      });
+
+      // 初始化阅读量显示
+      pageviewCount({
+        serverURL: walineServerURL,
+        update: true,
+        selector: '.waline-pageview-count'
+      });
+
+    });
+  })();
+</script>
+
+```
+### 2.3配置文件增加相关代码
+同时在_config.yml文件中增加waline相关配置：
 ```yml
 comments:
   provider: waline # [disqus | utterances | giscus]
@@ -79,10 +93,35 @@ comments:
     avatar: mp # 默认头像  
 
 ```
+### 2.4添加页面浏览量
+修改 _layouts/post.html
+请找到文件中 第 85 行到第 94 行 左右的位置，也就是这部分：
 
-最后提交代码部署完成。
+```md
 
-## 添加评论的邮箱通知
+{% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
+<span>
+<em id="pageviews">
+<i class="fas fa-spinner fa-spin small"></i>
+</em>
+{{ site.data.locales[lang].post.pageview_measure }}
+</span>
+{% endif %}
+将其替换为以下代码：
+
+HTML
+
+<span>
+  <i class="far fa-eye fa-fw"></i>
+  <span class="waline-pageview-count" data-path="{{ page.url }}">
+    <i class="fas fa-spinner fa-spin small"></i>
+  </span>
+  {{ site.data.locales[lang].post.pageview_measure }}
+</span>
+```
+
+
+### 2.5添加评论的邮箱通知
 [官方参考](https://waline.js.org/guide/features/notification.html)
 在vercel对应的容器中添加以下字段的环境变量：
 ```
@@ -96,7 +135,7 @@ AUTHOR_EMAIL: 博主邮箱，用来接收新评论通知。如果是博主发布
 ```
 ![](assets/attachments/blog/blog01.png)
 
-最后重启日期即可
+最后重启服务即可
 
 ---
 故事未完:216

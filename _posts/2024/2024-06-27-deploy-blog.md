@@ -12,7 +12,6 @@ pin: false
 toc: true
 comments: 
 render_with_liquid: false
-media_subpath: 
 ---
 
 > 记录博客的建站和域名选择
@@ -163,8 +162,8 @@ categories:
   - read
 tags:
   - read
-## 对的就是 auther 拼写错了，导致下面的toc属性无法识别，然后渲染不出来
-auther: blackbzy
+## 对的就是 author 拼写错了，导致下面的toc属性无法识别，然后渲染不出来
+author: blackbzy
 update_date: false
 pin: false
 toc: true
@@ -196,6 +195,28 @@ image:
 ### 3.5 rss订阅问题
 我因为中途切换为直接推 `/site`目录下的内容，rss订阅链接导致全是本地的链接，其他人无法访问。
 目前重新调整为vercel自动部署。
+
+>所以白光和侧边栏消失的问题又出现了╥﹏╥...
+
+还是js文件下不下来
+
+#### 3.5.1邪道解决方式
+本地构建并推送（“暴力”但有效）
+如果 Vercel 环境无法顺利执行编译脚本，你可以手动将生成的资源推送到仓库。
+
+在本地执行 Chirpy 的初始化（确保本地安装了 Node.js）：
+```shell
+bash _scripts/sh/init.sh
+```
+- 此时你会发现 assets/js/dist/ 目录下生成了许多 .min.js 文件。
+- 关键点：检查你的 .gitignore 文件。Chirpy 默认可能会忽略 assets/js/dist/*.min.js。
+- 删除或注释掉 .gitignore 中针对 assets/js/dist/ 的忽略规则。
+- 将这些文件 git add 并 push 到 GitHub。Vercel 只要在仓库里看到了这些文件，就不会再报错缺失。
+
+Chirpy 的架构比较特殊：
+源码 存在于 _javascript 目录中。
+发布版（即你报错缺失的文件）是通过 Rollup.js 或 Terser 压缩后放入 assets/js/dist 的。
+如果构建环境（Vercel）只跑 Ruby/Jekyll，而不跑 Node.js 编译任务，这些 dist 文件就永远不会生成。
 
 ## 未完待续
 - [x] [01_模板配置](/posts/blog-template)

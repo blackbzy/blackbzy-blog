@@ -12,7 +12,6 @@ pin: false
 toc: true
 comments: 
 render_with_liquid: false
-media_subpath: 
 ---
 
 > 基于waline添加comments
@@ -131,7 +130,7 @@ SMTP_PASS: SMTP 邮件发送服务的密码，一般为邮箱登录密码，部�
 SMTP_SECURE: 是否使用 SSL 连接 SMTP。
 SITE_NAME: 网站名称，用于在消息中显示。
 SITE_URL: 网站地址，用于在消息中显示。
-AUTHOR_EMAIL: 博主邮箱，用来接收新评论通知。如果是博主发布的评论则不进行提醒通知。
+author_EMAIL: 博主邮箱，用来接收新评论通知。如果是博主发布的评论则不进行提醒通知。
 ```
 ![](assets/attachments/blog/blog01.png)
 

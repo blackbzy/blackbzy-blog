@@ -1,5 +1,5 @@
 ---
-title: 崔走召命運3部曲阅读记
+title: 【读书】崔走召命運3部曲阅读记
 description: 命运的挣扎的史诗
 date: 2025-11-02
 categories:

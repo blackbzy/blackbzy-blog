@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/cloud_stone_marcocyclic/cloud_stone_marcocyclic03.jpg
+  path: /2024/cloud_stone_marcocyclic/cloud_stone_marcocyclic03.jpg
   alt: 萧山最高峰的女娲石（普通的一块石头）
 ---
 
@@ -25,18 +25,18 @@ image:
 
 早上大巴到出发点是10：30，多云，不见日光，气温2°左右，无风。简单拉伸一波之后出发，开始就是爬坡，楼梯加野路。
 
-![img](assets/attachments/2024/cloud_stone_marcocyclic/cloud_stone_marcocyclic02.jpg)
+![img](2024/cloud_stone_marcocyclic/cloud_stone_marcocyclic02.jpg)
 水哥穿着短裤和单件速干长袖，腰间缠着一个腰包就匆匆向前不见人影，木木也是，车上遇到的黑哥也是从出发点超过我之后人就再没见过，同行的是yyc和轰老虎。老虎是一个话痨，自称内向且羞涩，实际上喋喋不休，输出能力像个机关枪，甚至不会过热，长相还挺像b站的一个up主老蒋巨靠谱。
 
 在将近200m爬升后，出汗，脱掉冲锋衣，然后继续爬升，差不多400m到了山脊，此时算是热开了身体。这时候我和中队走在一起，结果我把他名字忘了，先是猜了258，错了，然后很笃定的说“哦，是飞鹰”，结果最后上了大巴发现是罗迪。他和我说越野其实他也是尝试了没多久，但是明年报了100越野，5000的爬升，也是被朋友忽忽悠悠报了名，和我一样，不过我是50，一样抱着“能完赛“的心情参加。到顶之后等了yyc和老虎几分钟，就继续前进，然后到了yyc擅长的下坡段，结果是大石头台阶，走的人麻了，又累又难下，下不快还危险。
 
-![img](assets/attachments/2024/cloud_stone_marcocyclic/cloud_stone_marcocyclic01.jpg)
+![img](2024/cloud_stone_marcocyclic/cloud_stone_marcocyclic01.jpg)
 <p align="center">大石头台阶</p>
 下到底，喘了口气，灌了瓶电解质饮料，接着马上就是段爬升，一段接一段，没有休息，一直走着”之字路”拐到顶上。心跳打鼓，老虎看了下表，好家伙9公里的路，1200m的爬升。这时我已经饿的不行，吃了个面包和一根香蕉，还有y总的糖，稍微缓了过来。接着没有休息继续前进，上坡下坡，由于体力明显下降，走的比较慢，但还是穿着单件的速干，加上轻微的风一吹，体温马上降低，持续消耗着我的能量。好在头我用头巾包了一下，防止头后侧的温度过低。但差不多半个小时的进程后，体感急转直下，手开始发麻，这时候到终点还有差不多6公里。还好y总和老虎看出了我有点恍惚，给了我一根蛋白棒，吃完之后再休息一会，体感明显好了很多，刚才有一点半马撞墙的感觉，稍微缓解。
 
 由于体感太差，且大腿前侧酸胀，后面即使400多的爬升，走的还是很艰难，走走喘喘，再休息一会。下坡大腿没力也不敢走的太快，但是稳着走最后一段还是很快，但是大石头台阶依然折磨，最后一段是一个竹林，3点多就已经很暗了，所以关门点设置还是很合理的，起码5点左右看不见。一路没停，赶到终点，老虎带着我们到了风轻云淡民宿，吃了20一碗的竹笋炒肉鸡蛋面，很大一碗，非常满足，还有热身水和瓜子。最后尾队也到的很早4：50到终点，比我们晚了40min，就此返程。
 
-![img](assets/attachments/2024/cloud_stone_marcocyclic/cloud_stone_marcocyclic04.jpg)
+![img](2024/cloud_stone_marcocyclic/cloud_stone_marcocyclic04.jpg)
 <p align="center">美味的面</p>
 我们走了差不多5个半小时，水哥3个小时就到了，黑哥也比我们快一个小时，果然都是大佬，贴地飞行。
 

@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/heavenstamp-live-house/heavenstamp-live-house02.jpg
+  path: /2024/heavenstamp-live-house/heavenstamp-live-house02.jpg
   alt: 沉浸在show中的sally
 ---
 
@@ -32,9 +32,9 @@ image:
 
 8点灯光熄灭，几分钟后sally和cinnamon上场，宽松的衣着，调好麦克风，简单的开场白就开始了今天的冒险，没有太多的介绍，一首接着一首，节奏或欢快或深沉，磁性且清亮的女声配合着键盘和吉他，还有cinnamon的和声，深沉旋律时静静聆听的观众，热情时sally和听众互动跳舞，构成了今天完美的体验。竭尽全力的歌声，行走的cd。cinnamon的一首creep也是一样的震撼，一个多小时的时间全身心的投入，如果不是我几乎录了全程的声音，完全感觉不到时间的流逝，甚至感觉演出时间太短了，完全不过瘾，但是最后还有签售和合影过程，时间紧凑，无法尽兴。希望sally能好好保养嗓子，这种唱法太吃身体的机能了，以后如果还有还是回去离我比较近的一场，希望那时候能早点开场，最后尽兴而归。
 
-![img](assets/attachments/2024/heavenstamp-live-house/heavenstamp-live-house01.jpg)
-![img](assets/attachments/2024/heavenstamp-live-house/heavenstamp-live-house03.jpg)
-![img](assets/attachments/2024/heavenstamp-live-house/heavenstamp-live-house04.jpg)
+![img](2024/heavenstamp-live-house/heavenstamp-live-house01.jpg)
+![img](2024/heavenstamp-live-house/heavenstamp-live-house03.jpg)
+![img](2024/heavenstamp-live-house/heavenstamp-live-house04.jpg)
 最后买了cd和T恤，参加了合影，算是支持和纪念我参加的第一场live house。
 
 

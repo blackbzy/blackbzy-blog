@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/science-fiction/science-fiction02.png
+  path: /2025/science-fiction/science-fiction02.png
   alt: 封面
 ---
 

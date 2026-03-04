@@ -15,7 +15,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/trekking-coleader-first/trekking-coleader-first01.jpg
+  path: /2025/trekking-coleader-first/trekking-coleader-first01.jpg
   alt: 没拍上照片，放点我平时的摄影(～￣▽￣)～
 ---
 
@@ -32,7 +32,7 @@ image:
 总的来说感觉还是尾队和中队很辛苦，我嘛，已经完全駄目です，领队这钱不好挣呀。
 
 tips：回来也是雾都
-![img](assets/attachments/2025/trekking-coleader-first/trekking-coleader-first02.jpg)
+![img](2025/trekking-coleader-first/trekking-coleader-first02.jpg)
 ## 2025-11-29 周六_杭州标毅
 一早签到依旧乱糟糟，喊了半天没人签到，一上大巴发现人都到齐了。。。
 

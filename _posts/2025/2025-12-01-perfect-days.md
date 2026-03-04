@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/perfect-days/perfect-days01.jpg
+  path: /2025/perfect-days/perfect-days01.jpg
   alt: 笔者绘电影原片
 ---
 

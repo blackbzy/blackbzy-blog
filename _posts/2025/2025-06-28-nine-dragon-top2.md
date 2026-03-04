@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/nine-dragon-top2/nine-dragon-top203.jpg
+  path: /2025/nine-dragon-top2/nine-dragon-top203.jpg
   alt: 光看到水就能降温的天气
 ---
 
@@ -31,10 +31,10 @@ image:
 从一坡开始出发就预感不妙，心率很快飙升，明明压着速度在走，但是心它有自己的想法，夏日比较活泼，气温在10点左右已经是32°，不敢去想接下来的热气蒸腾在山间是何感觉，只能保持着节奏，埋头爬山，汗浸湿了衣服，从帽檐袖套低落，我遵循着既定的策略每10min补水，同时1小时最少喝一瓶水，同时补充电解质。心率往着160上走，我就放慢脚步等着它的回落，这是这次徒步的一次次轮回，也是我做的最基础的安全保障。
 
 从一坡结束，我基本确定今天快不了一点，吸取【旺七】的经验，全力预防中暑，水得喝，心率得控制，冰袋也在背包中稳稳的装着，注意力放在了路线观察喝身体感受上，总之是做好最坏的打算。
-![img](assets/attachments/2025/nine-dragon-top2/nine-dragon-top201.jpg){: width="972" height="589" .w-50 .left}
+![img](2025/nine-dragon-top2/nine-dragon-top201.jpg){: width="972" height="589" .w-50 .left}
 
 这次补给足够，队友都很配合的放慢节奏，走走停停，没事看看心率补补水，到了二下有溪流可以降温，很多老哥直接扑进水潭之中，我们则是矜持的洗洗头和脸，把衣服裤子打湿，降温效果显著，给了很强的动力继续下面的行程，不过温度还是太高，中午差不多36°，凉意在短短的十分钟后被完全驱散，打湿的衣服又开始发烫，这时大家终于聊起了下撤的事，全票通过。
-![img](assets/attachments/2025/nine-dragon-top2/nine-dragon-top202.jpg){: width="972" height="589" .w-50 .right}
+![img](2025/nine-dragon-top2/nine-dragon-top202.jpg){: width="972" height="589" .w-50 .right}
 
 7公里的下撤点我们没有被诱惑，因为前面还有一个木果粉等待尝试，在一个村上的景区，后试了一下，确实爽口，陪着不同的口味的调味，非常解暑。
 

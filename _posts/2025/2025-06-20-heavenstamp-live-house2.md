@@ -13,7 +13,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/heavenstamp-live-house/heavenstamp-live-house06.jpg
+  path: /2025/heavenstamp-live-house/heavenstamp-live-house06.jpg
   alt: 迷幻摇滚
 ---
 
@@ -35,10 +35,10 @@ image:
 
 半个小的暖场结束，主角登场，sally和cinnamon装束没有变化，不过这次多了键盘Jupiter和鼓手ken takahashi，音乐又有了新的变化，随着灯光明暗交错的闪烁，正式的旅程开始。
 
-![img](assets/attachments/2025/heavenstamp-live-house/heavenstamp-live-house07.jpg)
+![img](2025/heavenstamp-live-house/heavenstamp-live-house07.jpg)
 开始可能sally的嗓子还没唱开，加上之前耳朵被冲击，莫名觉得声音有点蒙，不过在几分钟之后疑问就消除，具有穿透力的嗓音，热烈的氛围，更丰富的鼓点节奏，更律动的电子音，整个现场弥漫着着迷幻的氛围，让听众随之摇摆。
 
-![img](assets/attachments/2025/heavenstamp-live-house/heavenstamp-live-house05.jpg)
+![img](2025/heavenstamp-live-house/heavenstamp-live-house05.jpg)
 总之又是一场无法用语言形容的美妙体验。
 
 さよならした道の先で(在再见的道路前方)

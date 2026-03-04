@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/suzhou-fire-dragon/suzhou-fire-dragon01.jpg
+  path: /2025/suzhou-fire-dragon/suzhou-fire-dragon01.jpg
   alt: 穹窿瞰太湖
 ---
 
@@ -23,20 +23,20 @@ image:
 
 {% include embed/youtube.html id='xvp0avSDByE' %}
 ## 行程
-![img](assets/attachments/2025/suzhou-fire-dragon/suzhou-fire-dragon02.jpg)
+![img](2025/suzhou-fire-dragon/suzhou-fire-dragon02.jpg)
 这次是清总，y总和K总组的越野小分队，清总还承担了司机，8点半到起点，到17点45到结束点
 
 出发时候灰色的云涂抹着阴沉的山，显出冬日萧瑟，气温6度刚好，亦无风雨。
 
 这次走的是非常规路线，小恐龙的起点和游侠客的不同，是把游侠客最后一个坡作为起点，等我们第一个坡结束，游侠客出发，我们追的是尾队，所以一路看到的人不多。但是由于下载的轨迹比较老，所以有些路不通，最后还是按照游侠客的线路切，然后走一段又和轨迹合并。这次真的还是很感谢这些户外团队把这些路线引导的非常清楚，省去了很多找路的时间。
 
-![img](assets/attachments/2025/suzhou-fire-dragon/suzhou-fire-dragon03.jpg)
-![img](assets/attachments/2025/suzhou-fire-dragon/suzhou-fire-dragon04.jpg)
+![img](2025/suzhou-fire-dragon/suzhou-fire-dragon03.jpg)
+![img](2025/suzhou-fire-dragon/suzhou-fire-dragon04.jpg)
 小恐龙的爬升较高1200m，但距离只有14km，按照轨迹有2段不能走，于是按照游侠客的飘带切掉。有段绝望坡很长，爬的很辛苦。在小恐龙二坡下到景区，有一段适合秋天去采样拍片，枫叶飘红很是出片，在体力充沛的时候走完了小恐龙，然后在中间点补给一波出发光福。本来想拍的寺庙的猫组织，也未得逞，比较遗憾。
 
 光福的线爬升900m，但距离有22km。想看的梅花虽然开了，但不是成片的红色，只是在树林之间星星点点，路边闪现着出现。光福的路很好跑，上下坡分割均匀，但体力在20公里之后，消耗剧烈，爬坡和下坡痛苦了起来。第二个坡底清总膝盖不适下撤，我和Ky二总为了在天色渐暗之前赶快出山，最后2段基本没怎么休息，一路连爬带跑的走完尾程，安全出山。
 
-![img](assets/attachments/2025/suzhou-fire-dragon/suzhou-fire-dragon05.jpg)
+![img](2025/suzhou-fire-dragon/suzhou-fire-dragon05.jpg)
 最后清总在终点开车接我们，一路赶回上海，带着酸痛的身体饱餐一顿。
 
 ## 补给（应伙伴要求列出了补给）
@@ -76,7 +76,7 @@ image:
 2. 轨迹应当下载最新的，因为山间的变化比较快，灌木生长周期短，路很容易不通，超过3个月的轨迹就有很大概率走不通。
 
 
-![img](assets/attachments/2025/suzhou-fire-dragon/suzhou-fire-dragon06.jpg)
+![img](2025/suzhou-fire-dragon/suzhou-fire-dragon06.jpg)
 
 ---
 故事未完:54

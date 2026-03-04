@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/tech/mysql.png
+  path: /tech/mysql.png
   alt: logo
 ---
 

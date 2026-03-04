@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/volcano-love/volcano-love01.jpg
+  path: /2024/volcano-love/volcano-love01.jpg
   alt: 登山途中
 ---
 

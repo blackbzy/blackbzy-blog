@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/mountain-river-biography/mountain-river-biography01.jpg
+  path: /2025/mountain-river-biography/mountain-river-biography01.jpg
   alt: 传统的大红调子
 ---
 

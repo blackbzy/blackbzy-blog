@@ -13,7 +13,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/snowflake-pool/snowflake-pool03.jpg
+  path: /2024/snowflake-pool/snowflake-pool03.jpg
   alt: 消暑的狗
 ---
 
@@ -23,16 +23,16 @@ image:
 ## 出发
 中午11：30烈日当空，出了大巴开始冒汗，在马路边上不方便调整装备和状态（谁知道一路到下水都没咋调整）。从一段公路开始，过2个村子，一路沿着盘山公路往上走。周围的人很多，和西湖的线很像，偏景区，路边的溪是缓坡静水趟在石缝中，当地的居民很多支了一个遮阳棚，在溪水之上消暑打牌玩水娱乐，很是惬意。
 
-![img](assets/attachments/2024/fairy-canyon/fairy-canyon05.jpg){: width="972" height="589" .w-50 .right}
+![img](2024/fairy-canyon/fairy-canyon05.jpg){: width="972" height="589" .w-50 .right}
 到了雪花谭牌子处，领队开始收整队伍，而我在路边想贴肌贴发现出汗太多根本贴不上，再次僵住，遂就此上路。
 
 队伍整合完毕，就此下水，水没过脚踝，缓步摸着石头慢慢的就穿过了很多小水潭，有些是到大腿根，水底的石头并不稳当，亦步亦趋，而溪水冲刷过的石头非常滑，无法受力，得用脚慢慢试探发力，由此到了一个小的落差差不多1m左右的台阶，我试图抓住一个石头突出来的一个点往上扽我的上半身，但是我没穿手套结果手没拉住，脚离地了中心后倒，摔了一屁敦，小腿上侧碰了一下，还好没事。
 
-![img](assets/attachments/2024/fairy-canyon/fairy-canyon04.jpg)
+![img](2024/fairy-canyon/fairy-canyon04.jpg)
 果断放弃从侧边过去，果然最危险的不是一看就危险的，而是感觉自己可能行然后发现自己不行的地方，架在中间，最容易受伤
 
 ## 水潭
-![img](assets/attachments/2024/fairy-canyon/fairy-canyon02.jpg)
+![img](2024/fairy-canyon/fairy-canyon02.jpg)
 后面一路无事发生，到了水潭打了2场水杖，不敌3个小孩，败下阵来，全身湿透，暑意全消，很是舒适。水虽不是很干净，但是凉意真实，这种天气座6个小时车还是很值的。水里面很多渣子到了鞋里，走路很是磨脚，而我穿的还是军胶鞋，再次僵住
 
 ## 归途

@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls01.jpg
+  path: /2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls01.jpg
   alt: 赏画之人亦入画中
 ---
 
@@ -23,18 +23,18 @@ image:
 
 当天膝盖不舒服，爬升不是很高600多，气温在30度以下，全长差不多14km。
 ## 出发
-![水库处](assets/attachments/2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls03.jpg){: width="972" height="589" .w-50 .left}
+![水库处](2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls03.jpg){: width="972" height="589" .w-50 .left}
 出发时刻有些雾气，最开始是一个比较长且连续的爬坡，沿途竹林遍布道路2侧，石阶而上，道上密布着干枯的竹叶，有些台阶缀着青绿色的苔藓，已过10点，水汽渐淡，所以石阶只是较为湿滑，小心点还是较安全的。
 
-![水库处](assets/attachments/2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls04.jpg){: width="972" height="589" .w-50 .left}
+![水库处](2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls04.jpg){: width="972" height="589" .w-50 .left}
 盘旋的登山的路走了2个小时左右到了山顶，这里是覆盖着竹子枯叶的松软的土地，路两边耸着竹林，同时清风拂面，瞬间驱散了闷热的氛围。就此休息半个多小时开始午餐进食，虽然我带了压缩饼干，但是遇到了肉干，鸭脖，压缩饼干和荔枝，终究抵不住同伴的热情，饱餐一顿。
 
 ## 下山
 等尾队到达，开始出发下山，这次戴上了护膝，调整好了登山杖。下山的路大部分是和上山一样的石头阶梯蜿蜒而下。慢慢的下到山底的公路，向上走到底是一个村庄，而公路下是一个山谷，此时狂风吹过，山里的迷雾罩着树林，烟雨朦胧。阴郁的天气暗了下来，天空飘起细细的雨丝，体温骤降，所以拍了几张照片就往下开拔。中途喝了几口山泉水（村庄里面的人也以此为饮用水，应该是地下水），很是甘甜。
 在快到达山底的时候到了第一座瀑布石门龙潭，相比杏梅尖是稍微小点，但是瀑布下是一个斜坡，没有积水可以在边上的水洼洗脸降温，甚至有老哥在下面洗了把澡。
-![水库处](assets/attachments/2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls02.jpg)
-![水库处](assets/attachments/2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls05.jpg){: width="972" height="589" .w-50 .left}
-![水库处](assets/attachments/2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls06.jpg){: width="972" height="589" .w-50 .right}
+![水库处](2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls02.jpg)
+![水库处](2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls05.jpg){: width="972" height="589" .w-50 .left}
+![水库处](2024/stone-door-dragon-pool-double-falls/stone-door-dragon-pool-double-falls06.jpg){: width="972" height="589" .w-50 .right}
 <br>
 <br>
 <br>

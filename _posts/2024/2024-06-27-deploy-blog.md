@@ -91,7 +91,7 @@ url: ""
 博客主要面对的是国内的使用者，但是项目部署在vercel上，会出现加载慢的问题，但是使用国内的oss存在需要域名的问题，微软和aws的服务又不能稳定访问，也不支持长期的免费额度，暂时观望
 
 ### 3.2 页面加载刷白光
-![](/assets/attachments/blog/error-white-flash.gif)
+![](/blog/error-white-flash.gif)
 这个问题是我博客的一个浏览者提出的，后面好几次试图解决，但是没找到原因。
 
 现在我找了个时间一个一个排查原因，现在发现是`/assets/js/data`目录下的js文件缺失导致。
@@ -146,7 +146,7 @@ git commit -m "feat: 初始化迁移"
 | `chore`    | 杂项（构建工具等）  |
 
 ### 3.4 页面右侧目录失效 ：即文章内容下的未渲染
-![toc-error.png](/assets/attachments/blog/toc-error.png)
+![toc-error.png](/blog/toc-error.png)
 排查方式：
 1. Chirpy 的 TOC 需要你在文章头部设置中启用`toc: true `
 2. 文章是否包含 2 级或以上标题
@@ -169,7 +169,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/science-fiction/science-fiction02.png
+  path: /2025/science-fiction/science-fiction02.png
   alt: 封面
 ```
 #### 3.4.1 后续vercel部署是`assets/js/dist/theme.min.js`文件404
@@ -219,10 +219,10 @@ Chirpy 的架构比较特殊：
 如果构建环境（Vercel）只跑 Ruby/Jekyll，而不跑 Node.js 编译任务，这些 dist 文件就永远不会生成。
 
 ## 未完待续
-- [x] [01_模板配置](/posts/blog-template)
-- [x] [独立域名和服务器](/posts/blogs-domian-and-site)
+- [x] [01_模板配置](posts/blog-template)
+- [x] [独立域名和服务器](posts/blogs-domian-and-site)
 - [ ] 双语切换（待定）参考[双语使用方式](https://aursus.github.io/hexo-bilingual)
-- [x] [评论服务加上：waline](/posts/add-comments)
+- [x] [评论服务加上：waline](posts/add-comments)
 - [ ] 学习front_end的语言，自己进行theme的调整
 - [ ] 静态资源的cdn和oss服务托管
 

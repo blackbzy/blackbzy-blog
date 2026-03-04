@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/photographic-exhibition/photographic-exhibition02.jpg
+  path: /2024/photographic-exhibition/photographic-exhibition02.jpg
   alt: jeff wall 1979《为女性而作的图像》
 ---
 
@@ -46,34 +46,34 @@ image:
 
 初入展览的时候就是放着标志性的一张jeff wall 1979《为女性而作的图像》,这也是展览最特殊的一张，是背后打着灯，像地铁背后的广告一样，在其他的展品以照片方式陈列的顶上打光的方式衬托下非常有冲击力。
 
-![img](assets/attachments/2024/photographic-exhibition/photographic-exhibition01.jpg)
+![img](2024/photographic-exhibition/photographic-exhibition01.jpg)
 <p align="center">valie export 1972 《身体配置》</p>
-![img](assets/attachments/2024/photographic-exhibition/photographic-exhibition04.jpg)
+![img](2024/photographic-exhibition/photographic-exhibition04.jpg)
 <p align="center">Florence Henri 1928  自拍像</p>
 
 展品按着对应的主题展示，我按照自己的感受去线性的参观这些摄影作品，去想像当时拍摄画面的场景，折叠这些影像进行自己设想中的排列。
 
 黑白作品更偏向于画面的结构构成，像剪影，有着强烈对比的明暗。
 
-![img](assets/attachments/2024/photographic-exhibition/photographic-exhibition05.jpg)
+![img](2024/photographic-exhibition/photographic-exhibition05.jpg)
 <p align="center">david goldblatt 1975 particulars</p>
 参观黑白主题的作品时，突然灯光闪了一下，黑白色的画面在闪烁中变成了淡黄色灰色，然后跳跃又成黑白。
 
 走到了彩色影像区，开始感觉是对古典油画的模仿，然后从比较严肃的结构化的作品，渐渐转换到更自然的表达，对当时的环境和人物的生活进行记录。
 
-![img](assets/attachments/2024/photographic-exhibition/photographic-exhibition03.jpg){: width="972" height="589" .w-50 .left}
+![img](2024/photographic-exhibition/photographic-exhibition03.jpg){: width="972" height="589" .w-50 .left}
 <p align="center">cindy sherman 1981 无题</p>
 走到了偏现代和后现代的作品的展区，看到那些拼接的画面，一头雾水，也许平面设计艺术是无聊休息时间的解闷产物，先有作品再赋予意义，由实转虚。有些画面仅对一个空间的局部的抽取，来构成对整体的想象。
 越来越复杂景象的记录，不需要艺术家的解构再重构，画面的信息过于复杂填满了观众的思考间隙，只能凭感觉去对作品进行美学的品鉴。
 
 有些照片是拍的壁画，从实体再到照片，对实际的壁画产生很长的距离感。
-![img](assets/attachments/2024/photographic-exhibition/photographic-exhibition06.jpg)
+![img](2024/photographic-exhibition/photographic-exhibition06.jpg)
 <p align="center">大湿 2024 《窗外》</p>
 
 突然想到一个问题：摄影是从记录，变成了表达，还是先设计主题，再到寻找画面？
 
 可能仅仅就是在那个合适的瞬间按下快门，而已。
-![img](assets/attachments/2024/photographic-exhibition/photographic-exhibition08.jpg)
+![img](2024/photographic-exhibition/photographic-exhibition08.jpg)
 <p align="center">野 2024 《江对月影》</p>
 
 ## 后记

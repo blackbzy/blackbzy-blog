@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/tech/Java.png
+  path: /tech/Java.png
   alt: logo
 ---
 

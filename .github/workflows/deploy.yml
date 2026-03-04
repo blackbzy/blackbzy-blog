@@ -1,0 +1,50 @@
+name: Deploy Chirpy to VPS
+
+on:
+  push:
+    branches: [ blog ] # 修改为你的源码分支名
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Chirpy 需要完整历史记录来生成最后修改时间
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3' # 建议使用 Ruby 3.3
+          bundler-cache: true # 自动运行 bundle install 并缓存
+
+      - name: Build Site
+        run: |
+          bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production # 关键：确保开启图片 CDN 替换
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "_site/*"
+          target: "/var/www/blog"
+          strip_components: 1 # 剥离 _site 目录，直接把内容放到 /var/www/blog
+
+      - name: Fix Permissions and SELinux
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # 确保 Nginx 对目录有读取权限
+            sudo chown -R $USER:$USER /var/www/blog
+            sudo chmod -R 755 /var/www/blog
+            # 针对 CentOS 的 SELinux 修复
+            sudo chcon -Rt httpd_sys_content_t /var/www/blog || true

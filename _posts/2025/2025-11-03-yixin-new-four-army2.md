@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/yixin-new-four-army/yixin-new-four-army06.jpg
+  path: /2025/yixin-new-four-army/yixin-new-four-army06.jpg
   alt: 博主绘，或许博主的猫咪缘尚可~~
 ---
 
@@ -32,7 +32,7 @@ image:
 4上5上都很艰难，坡特陡，体能也已经消耗很大了，如果气温再高点可能又会回到那种中暑低血糖的处境，慢慢的挪动前进，不时的按压下大腿，维持在一个能走不抽的状态，说实话真要抽筋也没办法了，4颗盐丸都没有明显的效果，明明已经过了快40min，果然每个人的吸收效果不同，症状缓解的程度也不同，提前吃还是非常有必要的。倒霉
 
 最后五上几乎是靠意志坚持了，还好身体极限还能压榨压榨，走错了几十米爬升的下坡还是能切回去，脑海中只想能不能喝一口热的面汤，靠着这个念想一路到了终点，换好衣服点了面，然后剩下几分钟赶紧嗦完面条，喝了口汤，返回大巴，不过还是耽误了点大家的时间。不过已经满足了，毕竟上次新四军走完连口喝的都没有哈哈，开心。
-![img](assets/attachments/2025/yixin-new-four-army/yixin-new-four-army07.jpg)
+![img](2025/yixin-new-four-army/yixin-new-four-army07.jpg)
 ## tips：
 - 赛前的爬楼训练是必要的
 - 盐丸的使用方式也是需要平时积累的

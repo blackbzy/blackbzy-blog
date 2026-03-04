@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/xianren-cave/xianrendong_01.jpg
+  path: /2024/xianren-cave/xianrendong_01.jpg
   alt: 仙气淼淼的洞口，其实是一种污染
 ---
 
@@ -25,19 +25,19 @@ image:
  平淡的爬山过程：
  差不多1个多小时，休息的也比较多。天气比较闷热，大太阳，没什么风，出汗量和蒸桑拿差不多。
  中间到了乱石林，一个很好的拍照地点，就是没什么遮阳点，中间作为休息和补充食物的点，找了的偏僻的树荫吃了点压缩饼干，但还是太热了，于是提前出发。
-![洞口](assets/attachments/2024/xianren-cave/xianrendong_02.jpg)
+![洞口](2024/xianren-cave/xianrendong_02.jpg)
 
 ## 仙人洞
  下到洞口前温度骤降，在洞口就明显温度比外面低差不多10度，洞口很大，高度差不多20米左右，周围有茂密的植被覆盖，由于温差，洞周边还有些许雾气，似仙居一般，雾气的缭绕加上深深的洞口黑黢黢的感觉，看不真切，还得下去才能一探究竟。
  入了洞口沿着斜坡（应该是前人探出来的）缓步下降，地面是碎石加上水混着泥土，有些湿滑，但是装备齐全一点不慌，而且人还挺多（这次前后遇到了3波人，都是20几人的小分队）。前期的进洞没什么难度，看好脚下，踩稳四肢着地即可平稳下降。
  到了二层，过人的空间变小，空间没有正常的路，像不规则的梅花桩，得踩点通过也是得三点支撑，此时已是10度往下，我套上了冲锋衣。
-![下来的大斜坡](assets/attachments/2024/xianren-cave/xianrendong_04.jpg)
+![下来的大斜坡](2024/xianren-cave/xianrendong_04.jpg)
 
  出问题的是2-3的一个台阶，垂直的高差不多2米的台阶，要拉着绳子下去，但是我没踩稳，重心偏高了，结果直接下掉去了大腿根和手肘蹭了一下，还好没啥问题，能继续爬。接下来就是只有瘦子能过的洞穴了，只能一个人，且侧身才能通行，只有宽20cm不到的一段狭长曲折的路，地下是碎石混着地下水。这个狭长的路是分两段，中间一个小厅，最后是一个中厅。我觉得这个路就是这个洞的最大的特色，鬼斧神工。
 
  回程乏善可陈，一样的配方，一样的感受，不过上去比下去简单
-![烟气淼淼](assets/attachments/2024/xianren-cave/xianrendong_03.jpg)
-![索降](assets/attachments/2024/xianren-cave/xianrendong_05.jpg)
+![烟气淼淼](2024/xianren-cave/xianrendong_03.jpg)
+![索降](2024/xianren-cave/xianrendong_05.jpg)
 
 
 ## 值得一游

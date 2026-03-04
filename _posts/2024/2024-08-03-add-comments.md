@@ -132,7 +132,7 @@ SITE_NAME: 网站名称，用于在消息中显示。
 SITE_URL: 网站地址，用于在消息中显示。
 author_EMAIL: 博主邮箱，用来接收新评论通知。如果是博主发布的评论则不进行提醒通知。
 ```
-![](assets/attachments/blog/blog01.png)
+![](blog/blog01.png)
 
 最后重启服务即可
 

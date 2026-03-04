@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/nine-dragon-top/nine-dragon-top01.jpg
+  path: /2024/nine-dragon-top/nine-dragon-top01.jpg
   alt: 远眺九龙湖
 ---
 
@@ -27,20 +27,20 @@ image:
 
 今天的路相比云石大环好很多，连续的缓坡，刚好让身体慢慢热起来，开始就是400m的爬升到了山顶。到了这的最高峰九龙山，俯瞰九龙湖，天清气朗，远眺能看到远远的城市地平线，不过风过雷鸣，刚热起来的身体又开始降温，于是快速拍了照片久前进了。
 
-![img](assets/attachments/2024/nine-dragon-top/nine-dragon-top02.jpg)
+![img](2024/nine-dragon-top/nine-dragon-top02.jpg)
 下山接着一段缓下坡，刚好可以跑起来，不用像云石一样战战兢兢的担心摔倒，总1200的爬升，均匀的分布在22公里的山道中，缓缓的上坡缓缓的下坡，虽然中间还走错了一段，不过很快反应过来回到正确的轨迹。
 
 途中好几段林道景色迷人。在枫树林中，暗红色是叶子浑着黄色的叶一团团的簇在绿色棕色树的背景之中，俨然一幅萧瑟秋景。在观景栈道之上远眺山头竹海，风过浪起，阳光撒在竹林顶上，泛起银光，仿佛山顶的一汪清泉洒在绿意盎然的青山之上。在一段枯树林道前，阳光斜斜的穿过树杈，山腰一侧是光秃的整齐的树，枝岔像路灯一样向外展开，一侧是贴着山腰的灌木杂草，乍一看像是一道拱形的宫殿长廊，指引游客前往前方的秘境。
 
-![img](assets/attachments/2024/nine-dragon-top/nine-dragon-top04.jpg)
-![img](assets/attachments/2024/nine-dragon-top/nine-dragon-top05.jpg)
-![img](assets/attachments/2024/nine-dragon-top/nine-dragon-top06.jpg)
+![img](2024/nine-dragon-top/nine-dragon-top04.jpg)
+![img](2024/nine-dragon-top/nine-dragon-top05.jpg)
+![img](2024/nine-dragon-top/nine-dragon-top06.jpg)
 <p align="center">一路上的美景</p>
 就这样在穿梭林道之中，走走跑跑，很快结束了行程，差不多4个半小时。
 
 到终点去了领队推荐的厨娘小院就餐，但是由于这次去了2车人，且下午这个点农家乐人手较少，不过在忙时态度比较差，问有没有热水她直说没有，即使我们已经消费，且没有热水也有面汤，相比上周农家乐的差远了，且煮的面有些芯还是较为硬，其实周围还有几家农家，总之领队的推荐也不一定好，而且领队的逻辑也较为奇怪，说他们态度差你不也吃了么，只是图个近，其实也没多近。这算是行程中的美中不足。
 
-![img](assets/attachments/2024/nine-dragon-top/nine-dragon-top02.jpg)
+![img](2024/nine-dragon-top/nine-dragon-top02.jpg)
 
 # 2.反思
 1. 鞋不勒不顶了，但有新的问题就是2双袜子外面这层会不断收紧，导致前侧脚掌加脚趾像被手撰住，无法伸展，处于被动紧绷的状态，虽然不影响行动但不舒适，还得熟悉调整一下

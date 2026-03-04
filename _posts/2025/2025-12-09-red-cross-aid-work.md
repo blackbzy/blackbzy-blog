@@ -13,7 +13,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/red-cross-aid-work/red-cross-aid-work02.jpg
+  path: /2025/red-cross-aid-work/red-cross-aid-work02.jpg
   alt: 技能get
 ---
 
@@ -75,7 +75,7 @@ image:
 ## 实践
 静安区的红十字培训，老师很热情，讲解很生动，虽然只学了心肺复苏这一项，但是在模拟操作的时候发现这个真的很累，而且要点和技巧很多，作为一项救人的技能大家都学的很认真。
 
-![img](assets/attachments/2025/red-cross-aid-work/red-cross-aid-work01.jpg)
+![img](2025/red-cross-aid-work/red-cross-aid-work01.jpg)
 关键的点记录： 对于患者要判断是否失去意识和心跳再实施心肺复苏（10s之内），AED随到随用。每分钟按压100-120次，深度5-6cm，人工呼吸必须足够短，除了除颤，心肺复苏在救援到来之前或者心肺重新唤起之前不能停。
 
 培训报名：关注当地的红十字官方号，一般培训是由社区组织的，理论知识只是辅助，要现实中操作很多细节还是经过培训才能感受到的。

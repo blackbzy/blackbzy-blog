@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2024/gaoyang-mountain/gaoyang-mountain01.jpg
+  path: /2024/gaoyang-mountain/gaoyang-mountain01.jpg
   alt: image alternative text
 ---
 
@@ -36,8 +36,8 @@ image:
 
 整理好装备，继续出发，因为吃的太饱，速度稍慢了一点。第二个到底之后，紧接着一个绝望坡（指中间没有休息的点位，一直爬升到顶且，距离和爬升相对较大），我跟着冰姐和文仔，顶着一口气爬到顶，心肺爆炸，非常舒适，感觉这次的拉练到位了，等了没一会，狼姐和yyc都到位，继续出发，下山路过的竹林和橘子果园都很美，路也很好跑，橘子也很美味（捡的掉地上的，还没烂的）
 
-![img](assets/attachments/2024/light-spoke/light-spoke02.jpg)
-![img](assets/attachments/2024/light-spoke/light-spoke03.jpg)
+![img](2024/light-spoke/light-spoke02.jpg)
+![img](2024/light-spoke/light-spoke03.jpg)
 接下来第四段，相对轻松，期间路过的一个寺庙看到的缅因猫，非常帅，逮到了一直老鼠
 
 - 这次鞋鞋带没寄太紧，所以脚背不勒，但是下山顶脚趾了。果然适应还是得慢慢来，冰姐的秘方还是可以试一下，穿两双袜子（里面五指袜，外面套双运动袜）

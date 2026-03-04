@@ -26,13 +26,13 @@ render_with_liquid: false
 ## 1.资源准备
 1. 下载[静态资源](https://notbyai.fyi/help/#)
 
-2. 将静态资源放到对应的目录下： assets/attachments/2024/对应的文件夹（英文名）
+2. 将静态资源放到对应的目录下： /2024/对应的文件夹（英文名）
 ## 2.文件创建
 1. 在 /_includes 文件夹下创建 notbyai-logo.html 文件
 ```html
 <!-- _includes/notbyai-logo.html -->
 <a href="https://notbyai.fyi/" >
-    <img src="{{ site.url }}/assets/attachments/2024/notbyai/Chinese (CN)/Written By Human/Written-By-Human-Not-By-AI-Badge-white.png" alt="非ai创作" style="height: 30px; max-width: 100%;">
+    <img src="{{ site.url }}//2024/notbyai/Chinese (CN)/Written By Human/Written-By-Human-Not-By-AI-Badge-white.png" alt="非ai创作" style="height: 30px; max-width: 100%;">
 </a>
 ```
 2. 在 _includes/footer.html 文件中`<footer>`标签内位置添加以下代码
@@ -42,7 +42,7 @@ render_with_liquid: false
 ```
 ## 3.测试（针对jykell框架）
 1. 控制台执行 `bundle exec jekyll s`查看页面效果，调整logo尺寸
-![img](assets/attachments/2024/blogs-notbyai/blogs-notbyai01.png)
+![img](2024/blogs-notbyai/blogs-notbyai01.png)
 
 完结(⌐■_■)
 

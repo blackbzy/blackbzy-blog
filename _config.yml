@@ -95,8 +95,7 @@ theme_mode: dark
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn: ""
-
+cdn: "https://assets.blog.blackbzy.com"
 # the avatar on sidebar, support local or CORS resources
 avatar: "assets/img/favicons/android-chrome-192x192.png"
 

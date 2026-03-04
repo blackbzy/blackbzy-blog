@@ -38,13 +38,13 @@ comments: true
 	1. **密码**需要记牢，这是你唯一能打开这个库的方法
 2. 【坚果云】在坚果云上创建一个同步专用文件夹（建议勾选“默认不同步到本地”选项）。
 
-![img](assets/attachments/2025/auto-keepass/auto-keepass01.jpg)
+![img](2025/auto-keepass/auto-keepass01.jpg)
 
 3. 【坚果云】将 KeePass 数据库文件上传到该文件夹。
 4. 【坚果云】设置 WebDAV 权限，记录下框里面信息
 5. 【手机端KeePassXC】 选择 打开文件--》HTTPS（webDav）--》填入第4步【坚果云】记录的信息--》输入第1步记录的密码 ，这样就完成了云端和手机本地的同步
 
-![img](assets/attachments/2025/auto-keepass/auto-keepass02.jpg)
+![img](2025/auto-keepass/auto-keepass02.jpg)
 
 ## 电脑端的KeePassXC和Keepassxc-browser自动填充
 1. 重新打开【电脑端KeePassXC】并输入密码打开刚才的数据库

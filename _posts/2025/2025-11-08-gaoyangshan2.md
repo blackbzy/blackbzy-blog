@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/gaoyangshan2/gaoyangshan201.jpg
+  path: /2025/gaoyangshan2/gaoyangshan201.jpg
   alt: 博主绘高阳山猫咪
 ---
 > 适合拉练的好线，安全又普通，还有橘子(╹ڡ╹ )
@@ -22,8 +22,8 @@ image:
 
 ## 2025-11-08 第一次
 烟雨朦胧的一天，出发时雾气缭绕山间，气温也刚刚好，简单拉伸后出发，坡很缓，无论上下都很舒适，我觉得高阳山似乎是很适合拉练的一条线，根据体感调整爬升，路也很宽，上下加餐的时候也不会影响其他人，像其他有的路就很难做到，最后就是高阳山的橘子真的很便宜，有些人6毛钱买到的，我8毛买了6斤，自己肯定吃不完了，后面有机会分享吧。
-![img](assets/attachments/2025/gaoyangshan2/gaoyangshan202.jpg)
-![img](assets/attachments/2025/gaoyangshan2/gaoyangshan203.jpg)
+![img](2025/gaoyangshan2/gaoyangshan202.jpg)
+![img](2025/gaoyangshan2/gaoyangshan203.jpg)
 整体的感受就是在到1000爬升左右时大腿和臀部开始酸胀，没有抽筋的迹象，看来这次的策略还是很成功的，锻炼了目标肌肉群，同时提升了安全度。
 
 新四军还是得缓一缓，太勉强了，就是这多出来的400爬升让我有点进入极限耗尽的状态，路途中的补给也是需要再尝试一下新的idea吧，前路漫漫，道阻且长。

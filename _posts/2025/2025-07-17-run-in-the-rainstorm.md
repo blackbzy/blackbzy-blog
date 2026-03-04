@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/run-in-the-rainstorm/run-in-the-rainstorm01.jpg
+  path: /2025/run-in-the-rainstorm/run-in-the-rainstorm01.jpg
   alt: 笔者绘《肖申克的救赎》
 ---
 

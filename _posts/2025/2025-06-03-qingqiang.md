@@ -12,7 +12,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/qingqiang/qingqiang04.jpg
+  path: /2025/qingqiang/qingqiang04.jpg
   alt: 图书馆借的，书面的字都磨没了
 ---
 
@@ -24,8 +24,8 @@ image:
 《秦腔》主要围绕这个清风街这个县城下面的一个村子展开，透过引生这个人的视角串联着清风街大大小小的事，引生还有夏家发生的故事串联着街上的喜怒哀乐。 
 
 贾平凹在结尾的自白说《秦腔》是要为欐花街立个碑，我想那是文革之后改开之前那段时间的碑，农民渐渐的开始脱离土地，往城市去。要说原因，我想是因为苦还不挣钱，没人是天生爱吃苦受虐，有了资产和权力，分了等级，一切似乎改变，但似乎又什么都没变，农民依旧成了最底层的，于是农民开始逃离。夏天义是代表着农民，和土地处了一辈子，最后深埋土里，夏天智则代表了传统文化，书中也就是秦腔，最终也是不了了之。结局代表不了什么，我不说故事的过程，我也记不住，但是书中故事是把这种转变展现出来了的，如果你对秦腔文化感兴趣，对70 80年代锁碎的农村生活细节感兴趣，对社会在那个时期经历的转变带来的阵痛感兴趣，那这部书便值得一读。
-![img](assets/attachments/2025/qingqiang/qingqiang02.jpeg)
-![img](assets/attachments/2025/qingqiang/qingqiang03.jpeg)
+![img](2025/qingqiang/qingqiang02.jpeg)
+![img](2025/qingqiang/qingqiang03.jpeg)
 
 书里的[对联](https://www.sohu.com/a/602744234_121124734)也很有回味，我复制了几条：
 - **这一街许多笑话；我二老全不做声。**

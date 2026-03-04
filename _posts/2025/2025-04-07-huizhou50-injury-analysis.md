@@ -14,7 +14,7 @@ pin: false
 toc: true
 comments: true
 image:
-  path: assets/attachments/2025/huizhou50-injury-analysis/huizhou50-injury-analysis01.jpg
+  path: /2025/huizhou50-injury-analysis/huizhou50-injury-analysis01.jpg
   alt: 脚背筋膜炎位置
 ---
 
@@ -28,10 +28,10 @@ image:
 2. 脚起**水泡**
 	1. 鞋子引起的，但是我试了好几双鞋都有点磨脚。距离长了就容易磨脚
 3. **低血糖**
-	1. [云石大环](/posts/cloud_stone_marcocyclic)时引起的，在运动三小时后没有摄入糖分导致血糖有点低，提不起力气，感觉身体发冷
+	1. [云石大环](posts/cloud_stone_marcocyclic)时引起的，在运动三小时后没有摄入糖分导致血糖有点低，提不起力气，感觉身体发冷
 4. 脚背的**筋膜炎**（也可能是腱鞘囊肿或者脂肪纤维化）
-	1. 这次的[徽州50越野](/posts/huizhou50)引起的，因为是试穿的猛犸象的鞋（Aenergy TR BOA），鞋底相比我平时训练穿的较硬，导致脚的足弓受力异常，非常不适，然后在跑的时候一直前脚着地，导致足弓压力大，最后关节滑液或腱鞘滑液渗出，结块。需要加强脚部的肌肉力量和筋膜训练
-![img](assets/attachments/2025/huizhou50-injury-analysis/huizhou50-injury-analysis01.jpg)
+	1. 这次的[徽州50越野](posts/huizhou50)引起的，因为是试穿的猛犸象的鞋（Aenergy TR BOA），鞋底相比我平时训练穿的较硬，导致脚的足弓受力异常，非常不适，然后在跑的时候一直前脚着地，导致足弓压力大，最后关节滑液或腱鞘滑液渗出，结块。需要加强脚部的肌肉力量和筋膜训练
+![img](2025/huizhou50-injury-analysis/huizhou50-injury-analysis01.jpg)
 
 ## 以下是训练计划（仅供参考）：
 ```md

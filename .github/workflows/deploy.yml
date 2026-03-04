@@ -2,7 +2,7 @@ name: Deploy Chirpy to VPS
 
 on:
   push:
-    branches: [ blog ] # 修改为你的源码分支名
+    branches: [ blog ] # 仅在你的源码分支 blog 提交时触发
 
 jobs:
   build-and-deploy:
@@ -12,21 +12,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Chirpy 需要完整历史记录来生成最后修改时间
+          fetch-depth: 0 # Chirpy 获取文章修改时间所需
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true
+          bundler-cache: true # 自动执行 bundle install
 
       - name: Build Site
         run: |
-          # 1. 赋予初始化脚本执行权限
+          # 1. 注入 Git 身份，防止 init.sh 报错
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+          # 2. 初始化 Chirpy 资源 (补齐 Bootstrap 等样式文件)
           chmod +x tools/init.sh
-          # 2. 运行初始化脚本
           ./tools/init.sh
-          # 3. 执行正式构建
+
+          # 3. 执行生产环境构建 (开启图片 CDN 替换)
           bundle exec jekyll build
         env:
           JEKYLL_ENV: production
@@ -39,7 +43,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "_site/*"
           target: "/var/www/blog"
-          strip_components: 1
+          strip_components: 1 # 保证文件直接进入 /var/www/blog 而不是子目录
 
       - name: Fix Permissions and SELinux
         uses: appleboy/ssh-action@master
@@ -48,8 +52,8 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # 确保 Nginx 对目录有读取权限
+            # 确保 Nginx 用户有权限读取文件
             sudo chown -R $USER:$USER /var/www/blog
             sudo chmod -R 755 /var/www/blog
-            # 针对 CentOS 的 SELinux 修复
+            # 解决 CentOS 典型的 403 问题 (SELinux 标签)
             sudo chcon -Rt httpd_sys_content_t /var/www/blog || true

@@ -17,13 +17,14 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # 建议使用 Ruby 3.3
-          bundler-cache: true # 自动运行 bundle install 并缓存
+          ruby-version: '3.3'
+          bundler-cache: true
+
       - name: Build Site
         run: |
-        # 1. 赋予初始化脚本执行权限
+          # 1. 赋予初始化脚本执行权限
           chmod +x tools/init.sh
-        # 2. 运行初始化脚本（它会下载 bootstrap 等资源）
+          # 2. 运行初始化脚本
           ./tools/init.sh
           # 3. 执行正式构建
           bundle exec jekyll build
@@ -38,7 +39,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "_site/*"
           target: "/var/www/blog"
-          strip_components: 1 # 剥离 _site 目录，直接把内容放到 /var/www/blog
+          strip_components: 1
 
       - name: Fix Permissions and SELinux
         uses: appleboy/ssh-action@master

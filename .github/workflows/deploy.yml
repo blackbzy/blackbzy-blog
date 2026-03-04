@@ -19,7 +19,6 @@ jobs:
         with:
           ruby-version: '3.3' # 建议使用 Ruby 3.3
           bundler-cache: true # 自动运行 bundle install 并缓存
-
       - name: Build Site
         run: |
         # 1. 赋予初始化脚本执行权限

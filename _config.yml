@@ -129,7 +129,7 @@ comments:
     reactions_enabled: # optional, default to the value of `1`
   # Waline 评论系统 › https://waline.js.org/
   waline:
-    serverURL: 'https://comments.blackbzy.com' # 必須是你 VPS 的新地址，注意帶上 https://
+    serverURL: 'https://comments.blackbzy.com/' # 必須是你 VPS 的新地址，注意帶上 https://
     # --- 重要：清理舊配置 ---
     # 如果下面有 appID 或 appKey，請務必刪除或留空，MySQL 模式不需要它們
     # appID: ''

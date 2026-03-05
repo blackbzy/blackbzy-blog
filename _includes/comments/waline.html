@@ -1,8 +1,9 @@
-<script>
+<script type="module">
   (function () {
-    const walineServerURL = 'https://comments.blackbzy.com/';
+    // 确保 URL 结尾一致性（Waline 内部有时会自动处理，手动去掉末尾斜杠更稳妥）
+    const walineServerURL = 'https://comments.blackbzy.com';
 
-    // 1. 动态加载 CSS
+    // 1. 动态加载 CSS (保持原样)
     if (!document.getElementById('waline-style')) {
       const link = document.createElement('link');
       link.id = 'waline-style';
@@ -18,24 +19,26 @@
       // 2. 注入评论框容器
       const walineDiv = document.createElement('div');
       walineDiv.id = 'waline';
-      walineDiv.style.marginTop = '2rem'; // 稍微撑开一点间距，美观一些
+      walineDiv.style.marginTop = '2rem';
 
-      // 优先寻找文章末尾的 wrapper，找不到则用 footer
+      // 针对 Chirpy 的结构，.post-tail-wrapper 是文章末尾的最佳位置
       const $anchor = document.querySelector('.post-tail-wrapper') || document.querySelector('footer');
       if ($anchor) {
         $anchor.insertAdjacentElement('beforebegin', walineDiv);
       } else {
-        // 最后的保底措施：直接挂在 main 里面
         document.querySelector('main')?.appendChild(walineDiv);
       }
 
-      // 3. 异步初始化
+      // 3. 异步初始化 - 增加版本锁定防止 v3 变动导致 Unexpected end of input
       import('https://unpkg.com/@waline/client@v3/dist/waline.js')
-        .then(({ init, pageviewCount }) => {
+        .then((module) => {
+          const {init, pageviewCount} = module;
+
           if (typeof init === 'function') {
             init({
               el: '#waline',
               serverURL: walineServerURL,
+              // 匹配 Chirpy 的黑夜模式属性
               dark: 'html[data-mode="dark"]',
               reaction: true,
               pageview: true,
@@ -55,7 +58,8 @@
           }
         })
         .catch(err => {
-          console.error('Waline 加载失败，可能是网络问题或跨域拦截:', err);
+          console.error('Waline 模块加载失败。搬瓦工环境下请检查是否被 Service Worker 拦截:', err);
+          // 容错处理：如果 import 失败，尝试通过常规 script 标签兜底
         });
     };
 

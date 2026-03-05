@@ -1,4 +1,4 @@
-name: "Deploy Chirpy to VPS"
+name: Deploy Chirpy to VPS
 
 on:
   push:
@@ -8,20 +8,16 @@ on:
       - .gitignore
       - README.md
       - LICENSE
-      - "docs/**"
-
-  workflow_dispatch: # 允许手动触发
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 必须为 0，确保 Chirpy 插件能读取 Git 历史
-          # 如果你的 assets 是子模块，取消下面注释
-          # submodules: recursive
+          fetch-depth: 0 # Chirpy 必须
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -31,24 +27,18 @@ jobs:
 
       - name: Build Site
         run: |
-          # 配置 Git 身份，防止构建脚本报错
+          # 1. 身份配置
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
-          # 1. 打印 _posts 列表审计 (排查是否又是 Demo 数据)
-          echo "Checking source posts..."
-          ls _posts/
+          # 2. 初始化资源 (Chirpy 必须)
+          chmod +x tools/init.sh
+          ./tools/init.sh
 
-          # 2. 如果你的主题需要编译静态资源，运行此脚本
-          if [ -f "tools/init.sh" ]; then
-            chmod +x tools/init.sh
-            ./tools/init.sh
-          fi
-
-          # 3. 正式构建到 _site 目录
+          # 3. 关键：执行构建，生成 _site 文件夹
           bundle exec jekyll build
         env:
-          JEKYLL_ENV: "production"
+          JEKYLL_ENV: production
 
       - name: Clean VPS directory
         uses: appleboy/ssh-action@master
@@ -59,13 +49,13 @@ jobs:
           script: |
             rm -rf /var/www/blog/*
 
-      - name: Copy files to VPS via SCP
+      - name: Copy _site to VPS
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "_site/*"
+          source: "_site/*"  # 【关键】只发送构建好的静态文件
           target: "/var/www/blog"
           strip_components: 1
 

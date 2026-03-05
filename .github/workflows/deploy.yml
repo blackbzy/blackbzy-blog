@@ -19,7 +19,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true 
+          bundler-cache: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -36,7 +36,7 @@ jobs:
         run: |
           # 使用 --future 确保 2026 年的文章能被渲染
           bundle exec jekyll build --future
-          
+
           # 【调试命令】如果这里还是 0.7s，看这一步输出
           echo "Checking generated posts..."
           find _site/posts -name "*.html" | head -n 5

@@ -129,8 +129,16 @@ comments:
     reactions_enabled: # optional, default to the value of `1`
   # Waline 评论系统 › https://waline.js.org/
   waline:
-    server: https://comments.blackbzy.com/ # Vercal 服务端地址
-    placeholder: 就唠5毛钱嗑吧！ # 空白评论框时显示的文字
+    serverURL: 'https://comments.blackbzy.com' # 必須是你 VPS 的新地址，注意帶上 https://
+    # --- 重要：清理舊配置 ---
+    # 如果下面有 appID 或 appKey，請務必刪除或留空，MySQL 模式不需要它們
+    # appID: ''
+    # appKey: ''
+    # --- 其他可選配置 ---
+    pageview: true # 是否開啟閱讀量統計
+    comment: true  # 是否開啟評論數統計
+    lang: 'zh-CN'
+    placeholder: '來都來了，不說點什麼嗎？'
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:

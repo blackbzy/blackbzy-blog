@@ -11,39 +11,59 @@
       document.head.appendChild(link);
     }
 
-    // 2. 注入评论框容器
-    const walineDiv = document.createElement('div');
-    walineDiv.id = 'waline';
-    const $footer = document.querySelector('footer');
-    if ($footer) {
-      $footer.insertAdjacentElement('beforebegin', walineDiv);
+    const initWaline = () => {
+      // 防止重复创建容器
+      if (document.getElementById('waline')) return;
+
+      // 2. 注入评论框容器
+      const walineDiv = document.createElement('div');
+      walineDiv.id = 'waline';
+      walineDiv.style.marginTop = '2rem'; // 稍微撑开一点间距，美观一些
+
+      // 优先寻找文章末尾的 wrapper，找不到则用 footer
+      const $anchor = document.querySelector('.post-tail-wrapper') || document.querySelector('footer');
+      if ($anchor) {
+        $anchor.insertAdjacentElement('beforebegin', walineDiv);
+      } else {
+        // 最后的保底措施：直接挂在 main 里面
+        document.querySelector('main')?.appendChild(walineDiv);
+      }
+
+      // 3. 异步初始化
+      import('https://unpkg.com/@waline/client@v3/dist/waline.js')
+        .then(({ init, pageviewCount }) => {
+          if (typeof init === 'function') {
+            init({
+              el: '#waline',
+              serverURL: walineServerURL,
+              dark: 'html[data-mode="dark"]',
+              reaction: true,
+              pageview: true,
+              emoji: [
+                '//unpkg.com/@waline/emojis@1.4.0/weibo',
+                '//unpkg.com/@waline/emojis@1.4.0/bmoji',
+              ]
+            });
+          }
+
+          if (typeof pageviewCount === 'function') {
+            pageviewCount({
+              serverURL: walineServerURL,
+              update: true,
+              selector: '.waline-pageview-count'
+            });
+          }
+        })
+        .catch(err => {
+          console.error('Waline 加载失败，可能是网络问题或跨域拦截:', err);
+        });
+    };
+
+    // 4. 确保在 DOM 加载完成后执行
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initWaline);
+    } else {
+      initWaline();
     }
-
-    // 3. 异步初始化
-    import('https://unpkg.com/@waline/client@v3/dist/waline.js').then(({init, pageviewCount}) => {
-
-      // 初始化评论
-      init({
-        el: '#waline',
-        serverURL: walineServerURL,
-        dark: 'html[data-mode="dark"]',
-        reaction: true,
-        pageview: true, // 开启记录功能
-
-        // 设置 emoji 为微博与哔哩小黄脸
-        emoji: [
-          '//unpkg.com/@waline/emojis@1.4.0/weibo',
-          '//unpkg.com/@waline/emojis@1.4.0/bmoji',
-        ],
-      });
-
-      // 初始化阅读量显示
-      pageviewCount({
-        serverURL: walineServerURL,
-        update: true,
-        selector: '.waline-pageview-count'
-      });
-
-    });
   })();
 </script>

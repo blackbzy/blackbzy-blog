@@ -2,12 +2,7 @@ name: Deploy Chirpy to VPS
 
 on:
   push:
-    branches:
-      - blog
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - LICENSE
+    branches: [ blog ]
 
 jobs:
   build-and-deploy:
@@ -17,31 +12,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Chirpy 必须
-          submodules: recursive
+          fetch-depth: 0 # 必须为 0，否则 Chirpy 无法生成文章时间轴
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true
+          bundler-cache: true 
 
       - name: Build Site
         run: |
           # 1. 身份配置
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-
-          # 2. 初始化资源 (Chirpy 必须)
-          chmod +x tools/init.sh
-          ./tools/init.sh
-
-          # 3. 关键：执行构建，生成 _site 文件夹
-          bundle exec jekyll build
+          
+          # 2. 【关键】如果你的 _posts 已经有内容了，不要再跑 init.sh
+          # 因为 init.sh 可能会覆盖你的文章。我们直接 build。
+          
+          # 3. 强制 Jekyll 渲染所有日期（包括 2026）并包含文章
+          bundle exec jekyll build --future
+          
+          # 4. 【审计】检查到底生成了什么？
+          echo "Checking if index.html is generated..."
+          ls -lh _site/index.html
+          echo "Checking posts in _site..."
+          find _site/posts -name "*.html" | head -n 5
         env:
           JEKYLL_ENV: production
 
-      - name: Clean VPS directory
+      - name: Clean VPS
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
@@ -56,7 +55,7 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "_site/*"  # 【关键】只发送构建好的静态文件
+          source: "_site/*"  # 【关键】只发送构建产物
           target: "/var/www/blog"
           strip_components: 1
 
@@ -69,4 +68,3 @@ jobs:
           script: |
             sudo chown -R $USER:$USER /var/www/blog
             sudo chmod -R 755 /var/www/blog
-            sudo chcon -Rt httpd_sys_content_t /var/www/blog || true

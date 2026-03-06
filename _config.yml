@@ -35,7 +35,8 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: blackbzy
-  email: blackbzy@126.com # change to your email address
+  email: blackbzy@163.com # change to your email address
+  fediverse_handle: @blackbzy@blackbzy.com # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/blackbzy # change to your Twitter homepage
@@ -149,9 +150,9 @@ assets:
     env: # [development | production]
 
 pwa:
-  enabled: false # The option for PWA feature (installable)
+  enabled: true # The option for PWA feature (installable)
   cache:
-    enabled: false # The option for PWA offline cache
+    enabled: true # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.

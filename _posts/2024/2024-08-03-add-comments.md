@@ -7,7 +7,7 @@ categories:
 tags:
   - blog
 author: blackbzy
-update_date: 2025-12-19
+update_date: 2026-03-13
 pin: false
 toc: true
 comments: 
@@ -135,6 +135,10 @@ author_EMAIL: 博主邮箱，用来接收新评论通知。如果是博主发布
 ![](blog/blog01.png)
 
 最后重启服务即可
+
+## 后记
+后面遇到问题导致vercel不可用所以评论也进行切换了，详情可见:
+[被攻击的博客的顽强求生]({% post_url 2026-03-06-blog-attactered-move-to-vps %})
 
 ---
 故事未完:216

@@ -108,7 +108,7 @@ toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: waline # [disqus | utterances | giscus]
+  provider: giscus # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -118,14 +118,14 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
+    repo: blackbzy/blackbzy-blog
+    repo_id: R_kgDOPQz68Q
+    category: Announcements
+    category_id: DIC_kwDOPQz68c4C4Rn2
+    mapping:  # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
+    lang: zh-CN # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
   # Waline 评论系统 › https://waline.js.org/
   waline:

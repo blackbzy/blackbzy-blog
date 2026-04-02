@@ -3,13 +3,11 @@ title: 越野之后的睡眠问题
 description: 主要针对疲劳性和睡眠浅的问题
 date: 2025-11-30
 categories:
-  - Trail Running
   - summary
 tags:
-  - Trail Running
   - summary
 author: blackbzy
-update_date: false
+update_date: 2026-04-02
 pin: false
 toc: true
 comments: true
@@ -78,6 +76,8 @@ comments: true
   3. 10 分钟腹式呼吸（超有效）
     1. 4 秒吸气 → 6 秒吐气
   4. 入睡环境调到比平时更“凉一点”
+
+2026/4/2 ： 实践下来感觉睡眠稍微好一点了，但是还是会醒的很早，背比较酸。
 
 ---
 故事未完:334

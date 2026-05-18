@@ -49,13 +49,13 @@
             });
           }
 
-          if (typeof pageviewCount === 'function') {
-            pageviewCount({
-              serverURL: walineServerURL,
-              update: true,
-              selector: '.waline-pageview-count'
-            });
-          }
+          // if (typeof pageviewCount === 'function') {
+          //   pageviewCount({
+          //     serverURL: walineServerURL,
+          //     update: true,
+          //     selector: '.waline-pageview-count'
+          //   });
+          // }
         })
         .catch(err => {
           console.error('Waline 模块加载失败。搬瓦工环境下请检查是否被 Service Worker 拦截:', err);

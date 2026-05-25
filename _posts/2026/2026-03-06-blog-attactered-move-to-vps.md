@@ -691,7 +691,7 @@ comments:
 接下来重启新推送项目即可。
 ![blog-attactered-move-to-vps01.png](2026/blog-attactered-move-to-vps/blog-attactered-move-to-vps05.png)
 
-[waline在国内依然适用]({% post_url 2024-08-03-add-comments %})
+[waline在国内依然适用]({% post_url 2024/2024-08-03-add-comments %})
 
 ### 4.3. 如何注册 GitHub 账号
 

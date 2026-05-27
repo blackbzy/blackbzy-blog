@@ -9,7 +9,7 @@ tags:
   - trekking
   - indonesia
 author: blackbzy
-update_date: 2024-10-20
+update_date: 2026-05-27
 pin: true
 toc: true
 comments: true
@@ -379,6 +379,18 @@ image:
   <img src="/2024/indonesia-volcano/indonesia0014.jpg" alt="Image 1" style="flex-basis: 50%;  object-fit: cover;margin: 0; padding: 0; display: block;">
   <img src="/2024/indonesia-volcano/indonesia0015.gif" alt="Image 2" style="flex-basis: 50%;  object-fit: cover;margin: 0; padding: 0; display: block;">
 </div>
+
+## 补支出
+迟来的总结，还是1个多月之前听乞力马扎罗动员会时，野姐突然说印尼开销只有1w3左右。我突然发现这件事拖了太久了，我对我日常的支出并没有很好的规划。
+
+| 上海-印尼来回 | 4001     |
+| ------- | -------- |
+| 额外食物费用  | 126.88   |
+| 团费      | 5700     |
+| 换印尼盾    | 3000     |
+| 总支出     | 12827.88 |
+
+
 
 ---
 故事未完:289

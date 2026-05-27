@@ -3,9 +3,11 @@ title: 宁波飞鹰线
 description: 对酷暑还是要有敬畏之心(；′⌒`)
 date: 2026-05-25
 categories:
-  - blog
+  - Trail Running
+  - china
 tags:
-  - blog
+  - Trail Running
+  - china
 author: blackbzy
 update_date: false
 pin: false

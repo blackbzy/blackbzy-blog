@@ -9,3 +9,19 @@
 ';
 
 /* append your custom style below */
+
+.email-feedback {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--link-color);
+  background-color: var(--card-bg);
+  border-radius: 8px;
+}
+
+.email-feedback h5 {
+  margin-bottom: 0.75rem;
+}
+
+.email-feedback p:last-child {
+  margin-bottom: 0;
+}

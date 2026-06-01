@@ -3,9 +3,10 @@ title: 户外运动恢复
 description: 良好的恢复是长期户外的基础条件
 date: 2026-03-19
 categories:
-  - summary
+  - sport_theory
 tags:
-  - summary
+  - sport_theory
+  - recovery
 author: blackbzy
 update_date: false
 pin: false

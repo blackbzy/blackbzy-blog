@@ -5,9 +5,9 @@ date: 2025-11-07
 categories:
   - read
 tags:
-  - read
+  - life_design
 author: blackbzy
-update_date: false
+update_date: 2026-06-02
 pin: true
 toc: true
 comments: true

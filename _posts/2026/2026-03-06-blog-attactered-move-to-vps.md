@@ -1,13 +1,13 @@
 ---
-title: 博客迁移：从vercel到vps(被DDos攻击后的自救行动)
-description: 爬虫真的是毒瘤
+title: 被DDos攻击 博客迁移+增加cf防护
+description: 从vercel到vps,爬虫真的是毒瘤
 date: 2026-03-04
 categories:
   - blog
 tags:
   - blog
 auther: yourdomain
-update_date: 2026-03-13
+update_date: 2026-06-09
 pin: false
 toc: true
 comments: true

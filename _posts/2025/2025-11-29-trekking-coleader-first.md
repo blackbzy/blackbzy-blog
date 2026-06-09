@@ -1,5 +1,5 @@
 ---
-title: 关于领疾速队的浅浅尝试
+title: 关于领疾速队的浅浅尝试和感想
 description: 平衡照顾队员和自顾是一件难事
 date: 2025-11-29
 categories:
@@ -10,7 +10,7 @@ tags:
   - china
   - first_experience
 author: blackbzy
-update_date: false
+update_date: 2026-06-09
 pin: false
 toc: true
 comments: true

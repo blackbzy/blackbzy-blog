@@ -1,5 +1,5 @@
 ---
-title: 橘子林-嘉兴高阳山-训练过度啦。。。
+title: 橘子林-嘉兴高阳山-训练过度。。。
 description: 对适合拉练的好线要有敬畏之心(；′⌒`)
 date: 2025-12-20
 categories:
@@ -9,7 +9,7 @@ tags:
   - Trail Running
   - china
 author: blackbzy
-update_date:
+update_date: 2026-06-09
 pin: false
 toc: true
 comments: true

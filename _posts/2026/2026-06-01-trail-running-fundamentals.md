@@ -1,6 +1,6 @@
 ---
-title: 越野入门_基础训练和恢复相关
-description: 游侠客侠野追风学习记录
+title: 越野入门之-基础训练和练后恢复
+description: 主要是游侠客侠野追风学习记录
 date: 2026-06-01
 categories:
   - sport_theory
@@ -8,7 +8,7 @@ tags:
   - sport_theory
   - life_design
 author: blackbzy
-update_date: false
+update_date: 2026-06-09
 pin: false
 toc: true
 comments: true

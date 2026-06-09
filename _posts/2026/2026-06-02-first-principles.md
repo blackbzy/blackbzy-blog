@@ -1,5 +1,5 @@
 ---
-title: 第一性原理（First Principles）
+title: 读第一性原理（First Principles）-总结和感想
 description: 原理只是理论，不是捷径
 date: 2026-06-02
 categories:
@@ -7,7 +7,7 @@ categories:
 tags:
   - life_design
 author: blackbzy
-update_date: false
+update_date: 2026-06-09
 pin: false
 toc: true
 comments: true

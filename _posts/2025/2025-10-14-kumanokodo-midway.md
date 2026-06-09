@@ -1,5 +1,5 @@
 ---
-title: 日本熊野中边路
+title: 日本之行-踏破熊野中边路
 description: 对国外的徒步要有敬畏之心(；′⌒`)
 date: 2025-10-14
 categories:
@@ -9,7 +9,7 @@ tags:
   - trekking
   - japan
 author: blackbzy
-update_date: 2026-06-02
+update_date: 2026-06-09
 pin: false
 toc: true
 comments: true

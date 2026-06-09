@@ -1,5 +1,5 @@
 ---
-title: 越野之后的睡眠问题
+title: 越野之后的睡眠问题记录和一些解决方案
 description: 主要针对疲劳性和睡眠浅的问题
 date: 2025-11-30
 categories:
@@ -8,7 +8,7 @@ tags:
   - sport_theory
   - recovery
 author: blackbzy
-update_date: 2026-04-02
+update_date: 2026-06-09
 pin: false
 toc: true
 comments: true

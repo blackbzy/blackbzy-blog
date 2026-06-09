@@ -1,6 +1,6 @@
 ---
-title: “毕业”旅行
-description: 走的少，吃的多
+title: 一场失业之后的“毕业”旅行
+description: 走走看看，随心动，随风止
 date: 2025-09-08
 categories:
   - travel
@@ -9,7 +9,7 @@ tags:
   - travel
   - china
 author: blackbzy
-update_date: 2026-05-27
+update_date: 2026-06-09
 pin: false
 toc: true
 comments: true

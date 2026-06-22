@@ -1,9 +1,7 @@
 <script type="module">
   (function () {
-    // 确保 URL 结尾一致性（Waline 内部有时会自动处理，手动去掉末尾斜杠更稳妥）
     const walineServerURL = 'https://comments.blackbzy.com';
 
-    // 1. 动态加载 CSS (保持原样)
     if (!document.getElementById('waline-style')) {
       const link = document.createElement('link');
       link.id = 'waline-style';
@@ -13,15 +11,12 @@
     }
 
     const initWaline = () => {
-      // 防止重复创建容器
       if (document.getElementById('waline')) return;
 
-      // 2. 注入评论框容器
       const walineDiv = document.createElement('div');
       walineDiv.id = 'waline';
       walineDiv.style.marginTop = '2rem';
 
-      // 针对 Chirpy 的结构，.post-tail-wrapper 是文章末尾的最佳位置
       const $anchor = document.querySelector('.post-tail-wrapper') || document.querySelector('footer');
       if ($anchor) {
         $anchor.insertAdjacentElement('beforebegin', walineDiv);
@@ -29,7 +24,6 @@
         document.querySelector('main')?.appendChild(walineDiv);
       }
 
-      // 3. 异步初始化 - 增加版本锁定防止 v3 变动导致 Unexpected end of input
       import('https://unpkg.com/@waline/client@v3/dist/waline.js')
         .then((module) => {
           const {init, pageviewCount} = module;
@@ -38,32 +32,22 @@
             init({
               el: '#waline',
               serverURL: walineServerURL,
-              // 匹配 Chirpy 的黑夜模式属性
               dark: 'html[data-mode="dark"]',
               reaction: true,
               pageview: true,
               emoji: [
                 '//unpkg.com/@waline/emojis@1.4.0/weibo',
-                '//unpkg.com/@waline/emojis@1.4.0/bmoji',
+                '//unpkg.com/@waline/emojis@1.4.0/bmoji'
               ]
             });
           }
-
-          // if (typeof pageviewCount === 'function') {
-          //   pageviewCount({
-          //     serverURL: walineServerURL,
-          //     update: true,
-          //     selector: '.waline-pageview-count'
-          //   });
-          // }
         })
         .catch(err => {
-          console.error('Waline 模块加载失败。搬瓦工环境下请检查是否被 Service Worker 拦截:', err);
-          // 容错处理：如果 import 失败，尝试通过常规 script 标签兜底
+          /* 块级注释在压缩时是绝对安全的，不会误伤后续代码 */
+          console.error('Waline 模块加载失败:', err);
         });
     };
 
-    // 4. 确保在 DOM 加载完成后执行
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initWaline);
     } else {

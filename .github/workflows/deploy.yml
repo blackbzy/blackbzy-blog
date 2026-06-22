@@ -55,6 +55,10 @@ jobs:
           # 2. 绕过首次连接时的主机密钥确认（防止卡住）
           ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
 
+          # 3. 【新增核心步骤】通过 SSH 让 VPS 自动安装 rsync（CentOS/Rocky 系列）
+          # 使用 dnf/yum 静默安装，如果已安装则自动跳过
+          ssh ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "sudo dnf install rsync -y || sudo yum install rsync -y"
+
           # 3. 使用 rsync 进行严格的覆盖同步（--delete 会自动清理 VPS 目录上旧的、不用的垃圾文件）
           # -a: 归档模式，保持所有文件属性和完整性
           # -v: 打印同步详情

@@ -42,22 +42,21 @@ jobs:
           find _site/posts -name "*.html" | head -n 5
         env:
           JEKYLL_ENV: production
+      # ==========================================
+      # 终极修复：使用原生的、带严格校验的 rsync 部署到 VPS
+      # ==========================================
+      - name: Deploy to VPS via Rsync
+        run: |
+          # 1. 将 GitHub Actions 里的私钥写入临时文件，用于认证
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
 
-      - name: Clean and Copy to VPS
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            rm -rf /var/www/blog/*
+          # 2. 绕过首次连接时的主机密钥确认（防止卡住）
+          ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to VPS
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "_site/*"
-          target: "/var/www/blog"
-          strip_components: 1
+          # 3. 使用 rsync 进行严格的覆盖同步（--delete 会自动清理 VPS 目录上旧的、不用的垃圾文件）
+          # -a: 归档模式，保持所有文件属性和完整性
+          # -v: 打印同步详情
+          # -z: 传输时压缩，加快速度
+          rsync -avz --delete _site/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:/var/www/blog/

@@ -10,7 +10,6 @@ order: 5
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <style>
-  /* 瀑布流布局 */
   .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); grid-gap: 15px; padding: 10px 0; }
   .gallery-item { background-color: var(--card-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s ease; grid-row-end: span 24; }
   .gallery-item:hover { transform: translateY(-4px); }
@@ -19,12 +18,10 @@ order: 5
   .gallery-item:hover .gallery-copyright { opacity: 1; }
   #gallery-loading { text-align: center; padding: 3rem; color: var(--text-muted); }
 
-  /* ==================== 官方标准的双轨 Flex 隔离布局 ==================== */
   @media (min-width: 992px) {
     .fancybox__container { display: flex !important; flex-direction: row !important; }
     .fancybox__carousel { flex: 1 !important; }
 
-    /* 强行接管灯箱渲染出来的评论侧边栏 */
     .fancybox-dynamic-sidebar {
       width: 380px; height: 100%;
       background: var(--main-bg) !important;
@@ -44,7 +41,6 @@ order: 5
     }
   }
 
-  /* 确保评论区内部变量完美透传，不被灯箱的透明黑背景污染 */
   .fancybox-dynamic-sidebar h4 { margin-top: 0; font-size: 15px; font-weight: 600; color: var(--heading-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px;}
   .fancybox-dynamic-sidebar .waline-container { min-height: 200px; }
 </style>
@@ -56,7 +52,6 @@ order: 5
   let galleryWalineInstance = null;
   const walineServerURL = 'https://comments.blackbzy.com';
 
-  // 动态同步引入你原本的样式库
   if (!document.getElementById('waline-style')) {
     const link = document.createElement('link');
     link.id = 'waline-style';
@@ -100,12 +95,10 @@ order: 5
       loading.style.display = "none";
       container.style.display = "grid";
 
-      // 配置灯箱
       Fancybox.bind("[data-fancybox='gallery']", {
         Hash: false,
         Thumbs: { autoStart: false },
         on: {
-          // 💡 核心改良 1：在灯箱骨架刚铺设完毕时，塞入一个带有当前图片唯一标识 ID 的空外壳
           initLayout: (fancybox) => {
             const sidebarHtml = `
               <div class="fancybox-dynamic-sidebar">
@@ -116,12 +109,10 @@ order: 5
             fancybox.container.insertAdjacentHTML("beforeend", sidebarHtml);
           },
 
-          // 💡 核心改良 2：图片加载就绪后（不管是首次点开，还是左右切图），安全渲染
           done: (fancybox, slide) => {
             const currentPhotoPath = slide.triggerEl.getAttribute("data-caption");
             const photoName = currentPhotoPath.split('/').pop();
 
-            // 每次直接在 Fancybox 已经渲染完毕的 DOM 中抓取当前外壳中的元素
             const titleEl = fancybox.container.querySelector("#dynamic-photo-title");
             const walineEl = fancybox.container.querySelector("#dynamic-waline-box");
 
@@ -129,7 +120,6 @@ order: 5
               titleEl.innerHTML = `💬 照片评论 (${photoName})`;
             }
 
-            // 清理上一次的 Waline 实例（切图时很关键）
             if (galleryWalineInstance) {
               galleryWalineInstance.destroy();
               galleryWalineInstance = null;
@@ -137,14 +127,13 @@ order: 5
 
             if (!walineEl) return;
 
-            // 稍微延迟 40ms，等 Flex 弹性盒子宽度拉平定型后再挂载 Waline，防止图层不显示
             setTimeout(() => {
               import('https://unpkg.com/@waline/client@v3/dist/waline.js')
                 .then((module) => {
                   const { init } = module;
                   if (typeof init === 'function') {
                     galleryWalineInstance = init({
-                      el: walineEl, // 直接把真实的 DOM 句柄塞给它，不再用字符串去匹配 id，彻底断绝 null 报错！
+                      el: walineEl,
                       serverURL: walineServerURL,
                       path: currentPhotoPath,
                       dark: 'html[data-mode="dark"]',
@@ -163,7 +152,6 @@ order: 5
             }, 40);
           },
 
-          // 💡 核心改良 3：关闭时只销毁实例，外壳会随着灯箱被自然销毁，无需处理 DOM 挪动
           close: () => {
             if (galleryWalineInstance) {
               galleryWalineInstance.destroy();

@@ -224,7 +224,8 @@ Chirpy 的架构比较特殊：
 - [ ] 双语切换（待定）参考[双语使用方式](https://aursus.github.io/hexo-bilingual)
 - [x] [评论服务加上：waline](posts/add-comments)
 - [ ] 学习front_end的语言，自己进行theme的调整
-- [ ] 静态资源的cdn和oss服务托管
+- [x] 静态资源的cdn和oss服务托管
+- [x] 加上图墙
 
 ---
 故事未完:179

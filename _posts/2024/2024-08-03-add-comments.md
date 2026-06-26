@@ -27,15 +27,19 @@ render_with_liquid: false
 ### 2.1数据库链接leanCloud
 服务端基于vercel切换（基于[deta](https://waline.js.org/guide/deploy/deta.html)进行部署，也是可以的，尝试了一下没问题）
 系好leancloud提供的key，在vercel 的 chipry项目填入恰当的值
+
 ```
 LEAN_MASTER_KEY:
 LEAN_KEY：
 LEAN_ID：
+
 ```
 
 ### 2.2新增waline 模板
 新建文件  _includes/comments/waline.html
+
 ```md
+
 <script>
   (function () {
     const walineServerURL = 'https://comment.blackbzy.com/';
@@ -81,8 +85,10 @@ LEAN_ID：
 </script>
 
 ```
+
 ### 2.3配置文件增加相关代码
 同时在_config.yml文件中增加waline相关配置：
+
 ```yml
 comments:
   provider: waline # [disqus | utterances | giscus]
@@ -117,12 +123,14 @@ HTML
   </span>
   {{ site.data.locales[lang].post.pageview_measure }}
 </span>
+
 ```
 
 
 ### 2.5添加评论的邮箱通知
 [官方参考](https://waline.js.org/guide/features/notification.html)
 在vercel对应的容器中添加以下字段的环境变量：
+
 ```
 SMTP_SERVICE: SMTP 邮件发送服务提供商。
 SMTP_USER: SMTP 邮件发送服务的用户名，一般为登录邮箱。
@@ -131,7 +139,9 @@ SMTP_SECURE: 是否使用 SSL 连接 SMTP。
 SITE_NAME: 网站名称，用于在消息中显示。
 SITE_URL: 网站地址，用于在消息中显示。
 author_EMAIL: 博主邮箱，用来接收新评论通知。如果是博主发布的评论则不进行提醒通知。
+
 ```
+
 ![](blog/blog01.png)
 
 最后重启服务即可
@@ -139,7 +149,7 @@ author_EMAIL: 博主邮箱，用来接收新评论通知。如果是博主发布
 ## 后记
 后面遇到问题导致vercel不可用所以评论也进行切换了，详情可见:
 [被攻击的博客的顽强求生]({% post_url 2026-03-06-blog-attactered-move-to-vps %})
-
+[回到waline的怀抱]({% post_url 2026-06-26-blog-waline-back %})
 ---
 故事未完:216
 **Thoughts**:: justdoit.

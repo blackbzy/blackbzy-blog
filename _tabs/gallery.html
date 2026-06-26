@@ -120,18 +120,31 @@ order: 5
               titleEl.innerHTML = `💬 照片评论 (${photoName})`;
             }
 
+            // 1. 彻底销毁上一个实例，并强行清空内部 HTML，防止旧的渲染干扰
             if (galleryWalineInstance) {
-              galleryWalineInstance.destroy();
+              try {
+                galleryWalineInstance.destroy();
+              } catch(e) { }
               galleryWalineInstance = null;
+            }
+            if (walineEl) {
+              walineEl.innerHTML = ''; // 👈 关键：清空容器，阻断旧组件对 DOM 的劫持
             }
 
             if (!walineEl) return;
 
+            // 2. 稍微拉长一点延迟（80ms），躲过 Fancybox 弹窗撑开和图片重排的性能波峰
             setTimeout(() => {
+              // 再次确认此时用户没有快速关闭或者切到别的图
+              if (slide !== fancybox.getSlide()) return;
+
               import('https://unpkg.com/@waline/client@v3/dist/waline.js')
                 .then((module) => {
                   const { init } = module;
-                  if (typeof init === 'function') {
+                  if (typeof init === 'function' && walineEl) {
+                    // 再次兜底清空一次
+                    walineEl.innerHTML = '';
+
                     galleryWalineInstance = init({
                       el: walineEl,
                       serverURL: walineServerURL,
@@ -149,7 +162,7 @@ order: 5
                 .catch(err => {
                   console.error('图墙 Waline 模块加载失败:', err);
                 });
-            }, 40);
+            }, 80); // 👈 提高到 80ms，保证稳定性
           },
 
           close: () => {

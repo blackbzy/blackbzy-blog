@@ -61,7 +61,6 @@ order: 5
 </div>
 
 <script type="module">
-  // 1. 全局捕获无意义的请求中止报错，保护控制台干净
   window.addEventListener('unhandledrejection', (event) => {
     if (event.reason && (
       event.reason.name === 'AbortError' ||
@@ -77,7 +76,6 @@ order: 5
   let currentLoadTimeout = null;
   const walineServerURL = 'https://comments.blackbzy.com';
 
-  // 分页控制核心变量
   let allImages = [];
   let currentIndex = 0;
   const pageSize = 10;
@@ -90,7 +88,6 @@ order: 5
     document.head.appendChild(link);
   }
 
-  // 渲染一组图片的通用函数
   function renderNextPage() {
     const container = document.getElementById("gallery-container");
     const loadMoreBox = document.getElementById("load-more-box");
@@ -115,7 +112,6 @@ order: 5
 
     currentIndex += nextGroup.length;
 
-    // 如果所有照片全加完了，藏掉按钮
     if (currentIndex >= allImages.length) {
       loadMoreBox.style.display = "none";
     } else {
@@ -129,7 +125,6 @@ order: 5
     const loading = document.getElementById("gallery-loading");
     const btnLoadMore = document.getElementById("btn-load-more");
 
-    // 绑定“加载更多”按钮事件
     btnLoadMore.addEventListener("click", renderNextPage);
 
     try {
@@ -145,10 +140,8 @@ order: 5
       loading.style.display = "none";
       container.style.display = "grid";
 
-      // 首次只加载第一页（10张）
       renderNextPage();
 
-      // 初始化绑定具有强约束力的 Fancybox 布局
       Fancybox.bind("[data-fancybox='gallery']", {
         Hash: false,
         Thumbs: { autoStart: false },

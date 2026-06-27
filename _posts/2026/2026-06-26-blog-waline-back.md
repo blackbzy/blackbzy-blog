@@ -21,9 +21,9 @@ comments: true
 2. discus需要有github账号才能评论，我的博客大概率也不是程序员看。。。
 所以思虑良久还是得切回[waline](https://waline.js.org/)，那么之前的评论刚好我也备份了，可以同步回来。之前放弃是因为通过vercel部署的没有问题，可以正常访问，不过博客被攻击之后，vercel欠费了，基本是瘫痪了，只能部署到自己的vps服务器上，所以通过github action 部署不出意外是出意外了，一直解决不了评论加载不出来，显示那个html页面异常。
 
-那之前为啥切别的discus呢，[那就是这个故事了]({% post_url 2026/blog-attactered-move-to-vps %}) 
+那之前为啥切别的discus呢，[那就是这个故事了]({% post_url 2026/2026-03-06-blog-attactered-move-to-vps %}) 
 
-现在重新走一遍流程，看看是啥问题，基础的ngnix搭建和配置不再赘述，已经在被攻击的[那就是这个故事了]({% post_url 2026/blog-attactered-move-to-vps %}) 里面讲了，这里只针对waline+mysql的vps部署。
+现在重新走一遍流程，看看是啥问题，基础的ngnix搭建和配置不再赘述，已经在被攻击的[那就是这个故事了]({% post_url 2026/2026-03-06-blog-attactered-move-to-vps %}) 里面讲了，这里只针对waline+mysql的vps部署。
 
 ## 部署-基于docker
 ps：服务器系统不同，命令工具也不一定相同，用自己服务器有的指令就行
@@ -314,7 +314,7 @@ ssl_certificate /etc/nginx/ssl/comments/comments.pem; ssl_certificate_key /etc/n
 ```
 
 ### 在chipry中引入
-这部分在[添加waline]({% post_url 2024-08-03-add-comments %}) 已经写了，不再赘述，这里主要是解决之前的问题：
+这部分在[添加waline]({% post_url 2024/2024-08-03-add-comments %}) 已经写了，不再赘述，这里主要是解决之前的问题：
 浏览器报以下错，导致评论无法加载：
 
 ```sh

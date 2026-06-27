@@ -128,102 +128,238 @@ export default {
 ```html
 ---
 layout: page
-title: 实时图墙
+title: 杂草丛中 纸上余温
+icon: fas fa-palette
 permalink: /gallery/
+order: 5
 ---
 
-<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-<script src="https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <style>
-  /* 现代化的纯 CSS Grid 响应式瀑布流，不依赖 JS 算高度，性能极佳 */
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    grid-gap: 15px;
-    grid-auto-rows: 10px;
-    padding: 10px 0;
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); grid-gap: 15px; padding: 10px 0; }
+  .gallery-item { background-color: var(--card-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s ease; height: 200px; } /* 固定高度让瀑布流排列更整齐 */
+  .gallery-item:hover { transform: translateY(-4px); }
+  .gallery-link { position: relative; display: block; width: 100%; height: 100%; }
+  .gallery-copyright { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); color: #fff; font-size: 11px; padding: 15px 10px 5px 10px; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
+  .gallery-item:hover .gallery-copyright { opacity: 1; }
+  #gallery-loading { text-align: center; padding: 3rem; color: var(--text-muted); }
+
+  /* 加载更多按钮样式 */
+  .load-more-wrapper { text-align: center; margin: 30px 0; }
+  .btn-load-more { background: var(--card-bg); color: var(--text-color); border: 1px solid var(--border-color); padding: 10px 24px; border-radius: 20px; cursor: pointer; font-size: 14px; transition: all 0.2s; }
+  .btn-load-more:hover { background: var(--border-color); transform: scale(1.03); }
+
+  /* 🛠️ 终极自适应：侧边栏排版与防止图片挤压 */
+  @media (min-width: 992px) {
+    .fancybox__container { display: flex !important; flex-direction: row !important; }
+    /* 强行限制轮播区宽度，预留 380px 给侧边栏 */
+    .fancybox__carousel { width: calc(100% - 380px) !important; flex: none !important; }
+    /* 强行控制大图的最大高宽，防止横向或纵向巨图把侧边栏顶开 */
+    .fancybox__slide .fancybox__content { max-width: 100% !important; max-height: 90vh !important; object-fit: contain !important; }
+
+    .fancybox-dynamic-sidebar {
+      width: 380px; height: 100%; flex-shrink: 0;
+      background: var(--main-bg) !important;
+      color: var(--text-color) !important;
+      border-left: 1px solid var(--border-color);
+      overflow-y: auto; padding: 20px; z-index: 99;
+      box-shadow: -4px 0 15px rgba(0,0,0,0.05);
+    }
   }
-  .gallery-item {
-    background-color: var(--card-bg, #f8f9fa);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-    grid-row-end: span 15; /* 默认跨度 */
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
+  @media (max-width: 991px) {
+    .fancybox__container { display: flex !important; flex-direction: column !important; }
+    .fancybox-dynamic-sidebar {
+      width: 100%; max-height: 40vh; flex-shrink: 0;
+      background: var(--main-bg) !important;
+      color: var(--text-color) !important;
+      overflow-y: auto; padding: 15px; z-index: 99;
+    }
   }
-  .gallery-item:hover {
-    transform: translateY(-4px);
-  }
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    cursor: pointer;
-  }
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-  #gallery-loading {
-    text-align: center;
-    padding: 3rem;
-    color: var(--text-muted);
-  }
+
+  .fancybox-dynamic-sidebar h4 { margin-top: 0; font-size: 15px; font-weight: 600; color: var(--heading-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px;}
+  .fancybox-dynamic-sidebar .waline-container { min-height: 200px; }
 </style>
 
-<div id="gallery-loading">📸 正在从边缘节点同步最新照片...</div>
+<div id="gallery-loading">📸 正在从银河系边缘同步最新照片...</div>
 <div class="gallery-grid" id="gallery-container" style="display: none;"></div>
+<div class="load-more-wrapper" id="load-more-box" style="display: none;">
+  <button class="btn-load-more" id="btn-load-more">查看更多美好 ✨</button>
+</div>
 
-<script>
+<script type="module">
+  // 1. 全局捕获无意义的请求中止报错，保护控制台干净
+  window.addEventListener('unhandledrejection', (event) => {
+    if (event.reason && (
+      event.reason.name === 'AbortError' ||
+      event.reason.message?.includes('signal is aborted') ||
+      event.reason.message?.includes('Cancel')
+    )) {
+      event.preventDefault();
+      console.log('Ignored formal AbortError from Waline.');
+    }
+  });
+
+  let galleryWalineInstance = null;
+  let currentLoadTimeout = null;
+  const walineServerURL = 'https://comments.doman.com';
+
+  // 分页控制核心变量
+  let allImages = [];
+  let currentIndex = 0;
+  const pageSize = 10;
+
+  if (!document.getElementById('waline-style')) {
+    const link = document.createElement('link');
+    link.id = 'waline-style';
+    link.rel = 'stylesheet';
+    link.href = 'https://unpkg.com/@waline/client@v3/dist/waline.css';
+    document.head.appendChild(link);
+  }
+
+  // 渲染一组图片的通用函数
+  function renderNextPage() {
+    const container = document.getElementById("gallery-container");
+    const loadMoreBox = document.getElementById("load-more-box");
+
+    const nextGroup = allImages.slice(currentIndex, currentIndex + pageSize);
+
+    nextGroup.forEach(img => {
+      const item = document.createElement("div");
+      item.className = "gallery-item";
+      const photoKey = `/gallery/${img.key}`;
+
+      item.innerHTML = `
+        <a href="${img.url}" data-fancybox="gallery" data-caption="${photoKey}" class="gallery-link"
+           style="display: block; width: 100%; height: 100%; background: url('${img.url}') center center / cover no-repeat;">
+          <div class="gallery-copyright">
+             <span>© blackbzy</span>
+          </div>
+        </a>
+      `;
+      container.appendChild(item);
+    });
+
+    currentIndex += nextGroup.length;
+
+    // 如果所有照片全加完了，藏掉按钮
+    if (currentIndex >= allImages.length) {
+      loadMoreBox.style.display = "none";
+    } else {
+      loadMoreBox.style.display = "block";
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", async () => {
-    // 换成你刚刚创建的 Cloudflare Worker 的实际 API 地址
-    const apiUrl = "https://r2-gallery-api.xxxx.workers.dev";
+    const apiUrl = "换成你刚刚创建的 Cloudflare Worker 的实际 API 地址";
     const container = document.getElementById("gallery-container");
     const loading = document.getElementById("gallery-loading");
+    const btnLoadMore = document.getElementById("btn-load-more");
+
+    // 绑定“加载更多”按钮事件
+    btnLoadMore.addEventListener("click", renderNextPage);
 
     try {
       const response = await fetch(apiUrl);
       if (!response.ok) throw new Error("API 响应异常");
-      const images = await response.json();
+      allImages = await response.json();
 
-      if (images.length === 0) {
+      if (allImages.length === 0) {
         loading.innerText = "🔍 存储桶里还没有照片哦";
         return;
       }
 
-      images.forEach(img => {
-        const item = document.createElement("div");
-        item.className = "gallery-item";
-        
-        // 使用 Fancybox 数据属性，点击可直接看大图并左右切图
-        item.innerHTML = `
-          <a href="${img.url}" data-fancybox="gallery">
-            <img src="${img.url}" loading="lazy" alt="${img.key}" />
-          </a>
-        `;
-        container.appendChild(item);
-
-        // 动态计算瀑布流格子高度，防止图片加载延迟导致排版崩塌
-        const imgElement = item.querySelector('img');
-        imgElement.onload = () => {
-          const rowHeight = 10;
-          const rowGap = 15;
-          const height = item.getBoundingClientRect().height;
-          const rowSpan = Math.ceil((imgElement.naturalHeight / imgElement.naturalWidth * 240 + rowGap) / (rowHeight + rowGap));
-          item.style.gridRowEnd = `span ${rowSpan}`;
-        };
-      });
-
       loading.style.display = "none";
       container.style.display = "grid";
 
-      // 初始化灯箱效果
+      // 首次只加载第一页（10张）
+      renderNextPage();
+
+      // 初始化绑定具有强约束力的 Fancybox 布局
       Fancybox.bind("[data-fancybox='gallery']", {
         Hash: false,
-        Thumbs: { autoStart: false }
+        Thumbs: { autoStart: false },
+        on: {
+          initLayout: (fancybox) => {
+            const sidebarHtml = `
+              <div class="fancybox-dynamic-sidebar">
+                <h4 id="dynamic-photo-title">💬 照片评论</h4>
+                <div id="dynamic-waline-box" class="waline-container"></div>
+              </div>
+            `;
+            fancybox.container.insertAdjacentHTML("beforeend", sidebarHtml);
+          },
+
+          done: (fancybox, slide) => {
+            const currentPhotoPath = slide.triggerEl.getAttribute("data-caption");
+            const photoName = currentPhotoPath.split('/').pop();
+
+            const titleEl = fancybox.container.querySelector("#dynamic-photo-title");
+            const walineEl = fancybox.container.querySelector("#dynamic-waline-box");
+
+            if (titleEl) {
+              titleEl.innerHTML = `💬 照片评论 (${photoName})`;
+            }
+
+            if (currentLoadTimeout) {
+              clearTimeout(currentLoadTimeout);
+              currentLoadTimeout = null;
+            }
+
+            if (galleryWalineInstance) {
+              try {
+                galleryWalineInstance.destroy();
+              } catch(e) { }
+              galleryWalineInstance = null;
+            }
+            if (walineEl) {
+              walineEl.innerHTML = '';
+            }
+
+            if (!walineEl) return;
+
+            currentLoadTimeout = setTimeout(() => {
+              import('https://unpkg.com/@waline/client@v3/dist/waline.js')
+                .then((module) => {
+                  const { init } = module;
+
+                  if (typeof init === 'function' && walineEl) {
+                    walineEl.innerHTML = '';
+
+                    galleryWalineInstance = init({
+                      el: walineEl,
+                      serverURL: walineServerURL,
+                      path: currentPhotoPath,
+                      dark: 'html[data-mode="dark"]',
+                      reaction: true,
+                      requiredMeta: ['nick'],
+                      emoji: [
+                        '//unpkg.com/@waline/emojis@1.4.0/weibo',
+                        '//unpkg.com/@waline/emojis@1.4.0/bmoji'
+                      ]
+                    });
+                  }
+                })
+                .catch(err => {
+                  console.error('图墙 Waline 模块加载失败:', err);
+                });
+            }, 80);
+          },
+
+          close: () => {
+            if (currentLoadTimeout) {
+              clearTimeout(currentLoadTimeout);
+              currentLoadTimeout = null;
+            }
+            if (galleryWalineInstance) {
+              try {
+                galleryWalineInstance.destroy();
+              } catch(e) { }
+              galleryWalineInstance = null;
+            }
+          }
+        }
       });
 
     } catch (err) {
@@ -232,6 +368,7 @@ permalink: /gallery/
     }
   });
 </script>
+
 ```
 
 

@@ -11,39 +11,49 @@
     }
 
     const initWaline = () => {
-      if (document.getElementById('waline')) return;
+      const hasPageviewTag = document.querySelector('.waline-pageview-count');
+      const hasWalineContainer = document.getElementById('waline');
 
-      const walineDiv = document.createElement('div');
-      walineDiv.id = 'waline';
-      walineDiv.style.marginTop = '2rem';
-
-      const $anchor = document.querySelector('.post-tail-wrapper') || document.querySelector('footer');
-      if ($anchor) {
-        $anchor.insertAdjacentElement('beforebegin', walineDiv);
-      } else {
-        document.querySelector('main')?.appendChild(walineDiv);
-      }
+      if (!hasPageviewTag && hasWalineContainer) return;
 
       import('https://unpkg.com/@waline/client@v3/dist/waline.js')
         .then((module) => {
           const {init, pageviewCount} = module;
 
-          if (typeof init === 'function') {
-            init({
-              el: '#waline',
+          if (!hasWalineContainer) {
+            const walineDiv = document.createElement('div');
+            walineDiv.id = 'waline';
+            walineDiv.style.marginTop = '2rem';
+
+            const $anchor = document.querySelector('.post-tail-wrapper') || document.querySelector('footer');
+            if ($anchor) {
+              $anchor.insertAdjacentElement('beforebegin', walineDiv);
+            } else {
+              document.querySelector('main')?.appendChild(walineDiv);
+            }
+
+            if (typeof init === 'function') {
+              init({
+                el: '#waline',
+                serverURL: walineServerURL,
+                dark: 'html[data-mode="dark"]',
+                reaction: true,
+                pageview: true,
+                emoji: [
+                  '//unpkg.com/@waline/emojis@1.4.0/weibo',
+                  '//unpkg.com/@waline/emojis@1.4.0/bmoji'
+                ]
+              });
+            }
+          }
+          else if (hasPageviewTag && typeof pageviewCount === 'function') {
+            pageviewCount({
               serverURL: walineServerURL,
-              dark: 'html[data-mode="dark"]',
-              reaction: true,
-              pageview: true,
-              emoji: [
-                '//unpkg.com/@waline/emojis@1.4.0/weibo',
-                '//unpkg.com/@waline/emojis@1.4.0/bmoji'
-              ]
+              update: false
             });
           }
         })
         .catch(err => {
-          /* 块级注释在压缩时是绝对安全的，不会误伤后续代码 */
           console.error('Waline 模块加载失败:', err);
         });
     };

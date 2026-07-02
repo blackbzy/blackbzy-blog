@@ -52,6 +52,9 @@ order: 5
 
   .fancybox-dynamic-sidebar h4 { margin-top: 0; font-size: 15px; font-weight: 600; color: var(--heading-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px;}
   .fancybox-dynamic-sidebar .waline-container { min-height: 200px; }
+
+  /* 精简侧边栏附加信息栏样式 */
+  .fancybox-dynamic-sidebar .photo-meta-info { font-size: 12px; color: var(--text-muted); margin: -10px 0 15px 0; display: flex; gap: 10px; }
 </style>
 
 <div id="gallery-loading">📸 正在从银河系边缘同步最新照片...</div>
@@ -99,11 +102,13 @@ order: 5
       item.className = "gallery-item";
       const photoKey = `/gallery/${img.key}`;
 
+       /*✨ 优化点：首页卡片悬浮层加入了对全景浏览量的布局绑定（包含统一的 waline-pageview-count 样式及真实 data-path）*/
       item.innerHTML = `
         <a href="${img.url}" data-fancybox="gallery" data-caption="${photoKey}" class="gallery-link"
            style="display: block; width: 100%; height: 100%; background: url('${img.url}') center center / cover no-repeat;">
-          <div class="gallery-copyright">
+          <div class="gallery-copyright" style="display: flex; justify-content: space-between; align-items: center;">
              <span>© blackbzy</span>
+             <span>👁️ <span class="waline-pageview-count" data-path="${photoKey}">--</span></span>
           </div>
         </a>
       `;
@@ -117,6 +122,21 @@ order: 5
     } else {
       loadMoreBox.style.display = "block";
     }
+
+    /*
+     ✨ 核心逻辑：分页加载完 HTML DOM 后，触发 Waline 静态拉取列表内图片的浏览量更新
+    */
+    import('https://unpkg.com/@waline/client@v3/dist/waline.js')
+      .then((module) => {
+        const { pageviewCount } = module;
+        if (typeof pageviewCount === 'function') {
+          pageviewCount({
+            serverURL: walineServerURL,
+            update: false
+          });
+        }
+      })
+      .catch(() => {});
   }
 
   document.addEventListener("DOMContentLoaded", async () => {
@@ -147,9 +167,15 @@ order: 5
         Thumbs: { autoStart: false },
         on: {
           initLayout: (fancybox) => {
+            /*
+             ✨ 优化点：灯箱初始化时在标题下方预埋独立浏览量的具体容器
+            */
             const sidebarHtml = `
               <div class="fancybox-dynamic-sidebar">
                 <h4 id="dynamic-photo-title">💬 照片评论</h4>
+                <div class="photo-meta-info">
+                  <span>👁️ 热度：<span id="sidebar-pv-count" class="waline-pageview-count" data-path="">--</span> 次浏览</span>
+                </div>
                 <div id="dynamic-waline-box" class="waline-container"></div>
               </div>
             `;
@@ -162,6 +188,12 @@ order: 5
 
             const titleEl = fancybox.container.querySelector("#dynamic-photo-title");
             const walineEl = fancybox.container.querySelector("#dynamic-waline-box");
+
+            const sidebarPvEl = fancybox.container.querySelector("#sidebar-pv-count");
+            if (sidebarPvEl) {
+              sidebarPvEl.setAttribute("data-path", currentPhotoPath);
+              sidebarPvEl.innerText = "--";
+            }
 
             if (titleEl) {
               titleEl.innerHTML = `💬 照片评论 (${photoName})`;
@@ -187,7 +219,7 @@ order: 5
             currentLoadTimeout = setTimeout(() => {
               import('https://unpkg.com/@waline/client@v3/dist/waline.js')
                 .then((module) => {
-                  const { init } = module;
+                  const { init, pageviewCount } = module;
 
                   if (typeof init === 'function' && walineEl) {
                     walineEl.innerHTML = '';
@@ -204,6 +236,14 @@ order: 5
                         '//unpkg.com/@waline/emojis@1.4.0/bmoji'
                       ]
                     });
+
+                    if (typeof pageviewCount === 'function') {
+                      pageviewCount({
+                        serverURL: walineServerURL,
+                        path: currentPhotoPath,
+                        update: true
+                      });
+                    }
                   }
                 })
                 .catch(err => {

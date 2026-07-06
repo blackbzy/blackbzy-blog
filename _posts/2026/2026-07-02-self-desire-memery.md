@@ -3,9 +3,11 @@ title: 记忆-欲望-自我
 description: 写的很乱，想法也很乱，人生也很乱
 date: 2026-07-02
 categories:
-  - blog
+  - thought
+  - self
 tags:
-  - blog
+  - thought
+  - self
 author: blackbzy
 update_date: false
 pin: false

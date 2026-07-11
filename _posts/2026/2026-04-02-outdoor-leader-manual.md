@@ -3,9 +3,9 @@ title: 户外领队的初级手册
 description: 希望以后有机会实践吧
 date: 2026-04-02
 categories:
-  - summary
+  - guideline
 tags:
-  - summary
+  - guideline
 author: blackbzy
 update_date: false
 pin: false

@@ -4,10 +4,10 @@ description: 遇到了很多问题，主要选择了影响大的分析一下，�
 date: 2025-04-07
 categories:
   - Trail Running
-  - summary
+  - guideline
 tags:
   - Trail Running
-  - summary
+  - guideline
 author: blackbzy
 update_date: false
 pin: false

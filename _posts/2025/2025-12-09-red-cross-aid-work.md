@@ -3,9 +3,9 @@ title: 记红十字急救培训（初级）
 description: 助人也是助己
 date: 2025-12-09
 categories:
-  - summary
+  - guideline
 tags:
-  - summary
+  - guideline
   - first_experience
 author: blackbzy
 update_date: false

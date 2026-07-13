@@ -95,8 +95,8 @@ Bosch推出了电助力自行车（E-bike）ABS系统，已经在部分高端电
   - 它可以降低因只用前刹或只用后刹带来的风险，但**不能像ABS一样防止抱死**。
 - **骑姿**
   - 紧急制动时，身体迅速向后、降低重心，可以明显减少前翻的风险。这也是很多骑行培训会反复练习的动作。Emergency Braking（紧急制动）
-- https://www.youtube.com/watch?v=uyw4yaG0IVM
-- https://www.youtube.com/watch?v=z8qQit9mueg
+- [刹车教学视频1](https://www.youtube.com/watch?v=uyw4yaG0IVM)
+- [刹车教学视频2](https://www.youtube.com/watch?v=z8qQit9mueg)
 
 实际训练怎么练？
 [美国自行车协会](https://usacycling.org/teams/club-tool-kit/slow-speed-skills?utm_source=chatgpt.com)给教练的建议，就是从低速开始反复练，逐渐增加速度。
@@ -182,13 +182,11 @@ Bosch推出了电助力自行车（E-bike）ABS系统，已经在部分高端电
 ↓
 
 95%
+
 ```
 
 整个过程可能只有 **0.2～0.4 秒**。
 这种渐进式加压（Brake Modulation）能让轮胎始终接近最大抓地力，而不是瞬间抱死。
-
-
-很多骑行教练都会说一句话：
 > **不要等真正遇到汽车突然变道或行人冲出来，才第一次体验自行车的极限制动力。**
 
 在空旷、安全的场地花 20～30 分钟练习几次紧急制动，往往比升级更贵的刹车系统，对实际安全的提升更直接。

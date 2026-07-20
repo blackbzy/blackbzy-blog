@@ -1,5 +1,5 @@
 ---
-title: 复眼人-吴明益
+title: 【读后感】复眼人-吴明益
 description: 一本充满想象力的小说，魔幻现实主义色彩的生态文学。
 date: 2026-07-19
 categories:

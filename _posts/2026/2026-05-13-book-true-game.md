@@ -1,5 +1,5 @@
 ---
-title: 【book】 这游戏太真实了
+title: 【读后感】 这游戏太真实了
 description: 是不是游戏很难说(⌐■_■)
 date: 2026-05-17
 categories:

@@ -1,5 +1,5 @@
 ---
-title: 【book】《Can't Hurt Me》+《Never Finished》
+title: 【读后感】《Can't Hurt Me》+《Never Finished》
 description: 让行动发生，Stay Hard!
 date: 2026-07-12
 categories:
@@ -7,7 +7,7 @@ categories:
 tags:
   - read
 author: blackbzy
-update_date: false
+update_date: 2026-07-20
 pin: false
 toc: true
 comments: true

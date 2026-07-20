@@ -1,5 +1,5 @@
 ---
-title: 【book】幽冥仙途
+title: 【读后感】幽冥仙途
 description: 一本古早的网络仙侠小说
 date: 2026-06-21
 categories:

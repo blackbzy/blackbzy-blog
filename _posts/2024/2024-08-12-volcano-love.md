@@ -1,5 +1,5 @@
 ---
-title: 【纪录片】火山恋人
+title: 【观影感受】火山恋人
 description: 火山恋人观影
 date: 2024-08-12
 categories:

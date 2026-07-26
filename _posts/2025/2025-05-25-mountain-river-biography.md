@@ -1,5 +1,5 @@
 ---
-title: 【读书】山河传_贾平凹
+title: 【读后感】山河传_贾平凹
 description: 步子迈大了，扯到了--
 date: 2025-05-25
 categories:

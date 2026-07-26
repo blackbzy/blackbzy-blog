@@ -1,5 +1,5 @@
 ---
-title: 【thought】关于自己的一点想法
+title: 【自我】关于自己的一点想法
 description: 我的一些自说自话，诚实的想法
 date: 2025-11-10
 categories:

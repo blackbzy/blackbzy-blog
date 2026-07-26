@@ -1,5 +1,5 @@
 ---
-title: 【thought】站在陡坡上的一周：一次关于自律幻觉的记录
+title: 【自我】站在陡坡上的一周：一次关于自律幻觉的记录
 description: 记录颓废的一周
 date: 2025-12-27
 categories:

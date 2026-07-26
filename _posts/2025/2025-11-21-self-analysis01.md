@@ -1,5 +1,5 @@
 ---
-title: 【thought】冷漠的人
+title: 【自我】冷漠的人
 description: 诚实表达，拥抱冒险
 date: 2025-11-21
 categories:

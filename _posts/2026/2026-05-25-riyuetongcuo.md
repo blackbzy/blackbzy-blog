@@ -1,5 +1,5 @@
 ---
-title: 【漫画】日月同错
+title: 【读后感】日月同错
 description: 命运交织的史诗故事
 date: 2026-05-24
 categories:

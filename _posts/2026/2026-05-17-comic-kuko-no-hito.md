@@ -1,5 +1,5 @@
 ---
-title: 【漫画】孤高之人（孤高の人）
+title: 【读后感】孤高之人（孤高の人）
 description: 人為什麼要登山呢？因為山就在那裡。
 date: 2026-05-17
 categories:

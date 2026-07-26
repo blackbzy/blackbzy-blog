@@ -1,5 +1,5 @@
 ---
-title: 【读书】科幻之书Ⅱ
+title: 【读后感】科幻之书Ⅱ
 description: 科幻的力量在于为现实生活找到可能的出口，可能性！！！
 date: 2025-07-06
 categories:

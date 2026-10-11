@@ -7,7 +7,7 @@ categories:
 tags:
   - life
 author: blackbzy
-update_date: 2026-08-02
+update_date: 2026-10-11
 pin: false
 toc: true
 comments: true
@@ -74,6 +74,8 @@ comments: true
   - day11 找到方法能固定好膝盖走路，不容易打摆子（微曲膝盖前脚掌着地）
   - day14 能正常走路了
   - day15 能骑共享单车了,但是还是做不了深蹲
+
+三个月的休息膝盖恢复的差不多了，身体上的影响只有嘴上的一道疤，嘛，这段经历算是结束了。
 
 ## 针对事故中的刹车抱死的解决方案
 
